@@ -1,0 +1,2 @@
+@include('template')
+@include('header')
