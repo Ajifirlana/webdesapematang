@@ -15,6 +15,7 @@ Route::get('/', 'WelcomeController@index');
 
 
 Route::get('home', 'HomeController@index');
+Route::get('home/cari','HomeController@cari');
 Route::get('backend/tambahberita', 'HomeController@tambahberita');
 Route::get('backend/editberita/{id}','HomeController@editberita');
 Route::get('backend/tampilberita/{id}','HomeController@tampilberita');
@@ -28,9 +29,13 @@ Route::post('backend/tambahgaleristore','GaleriController@tambahgaleristore');
 Route::get('backend/tampilgaleri/{id}','GaleriController@tampilgaleri');
 Route::get('backend/editgaleri/{id}','GaleriController@editgaleri');
 Route::post('backend/updategaleri/{id}','GaleriController@updategaleri');
+Route::get('/backend/hapus/{id}','GaleriController@hapus');
 
 
 Route::get('backend/widget', 'WidgetsController@index');
+Route::get('backend/editwidget/{id}','WidgetsController@editwidget');
+Route::post('backend/updatewidget/{id}','WidgetsController@updatewidget');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

@@ -1,10 +1,15 @@
 <?php namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Galeri;
 use App\Berita;
 use Illuminate\Http\Request;
+use File;
+use Carbon\Carbon;
+use Cookie;
+use Session;
 
 class GaleriController extends Controller {
 
@@ -15,8 +20,8 @@ class GaleriController extends Controller {
 	 */
 	public function index()
 	{
-		$galeri = Galeri::all();
-		$berita = Berita::all();
+		$galeri = DB::table('galeri')->paginate(5);
+		$berita = DB::table('berita')->paginate(5);
 
 		return view('backend/galerifoto',['galeri' => $galeri],['berita' => $berita]);
 	}
@@ -106,6 +111,17 @@ class GaleriController extends Controller {
  
     $galeri->save();
     return redirect('/backend/galeri')->with(['success' => 'Data Berhasil Di Edit']);
+}
+
+public function hapus($id){
+	// hapus file
+	$image = Galeri::where('id',$id)->first();
+	File::delete('uploads/'.$image->file);
+
+	// hapus data
+	Galeri::where('id',$id)->delete();
+
+	return redirect()->back();
 }
 
 

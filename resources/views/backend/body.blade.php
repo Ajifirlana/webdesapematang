@@ -19,12 +19,34 @@
       <a href="backend/tambahberita" class="btn btn-success">
         <i class="la la-plus"></i> Berita Baru
         </a>
+        <hr>
+        <table class="table table-bordered" border="0">
+<thead>
+    
+    <th scope="row">
+ 
+        <p>Cari Data Berita:</p>
+        <form action="/home/cari" method="GET" class="form-inline">
+  
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="inputPassword2" class="sr-only">Kata Kunci</label>
+    <input type="text" class="form-control" name="cari" placeholder="Cari Berita .." value="{{ old('cari') }}">
+  </div>
+  <button type="submit" class="btn btn-primary mb-2">Cari</button>
+</form>
 
+ 
+  </th>
+  </thead>
+  </table>
         <hr>
 
-        <table class="table table-bordered">
+        <table class="table table-bordered" border="0">
+        
+  <p></p>
   <thead>
     <tr>
+    <th scope="col-md-12">No</th>
       <th scope="col">Judul Berita</th>
       <th scope="col">Isi Berita</th>
       <th scope="col">Gambar Berita</th>
@@ -32,8 +54,11 @@
     </tr>
   </thead>
   <tbody>
+  <?php $no = 0;?>
    @foreach($berita as $b )  
+   <?php $no++ ;?>
     <tr>
+    <th scope="row">{{ $no }}</th>
       <th scope="row">{{ str_limit ($b->judul, 50) }}</th>
       <th scope="row">{{ str_limit ($b->isi, 50) }}</th>
 <th scope="row"><img src="../uploads/{{$b->image}}" width="100px"></th>

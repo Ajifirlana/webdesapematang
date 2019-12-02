@@ -10,7 +10,7 @@
         <div class="container">
             <div class="card mt-5">
                 <div class="card-header text-center">
-                   <strong>EDIT DATA BERITA</strong> - 
+                   <strong>EDIT DATA WIDGET</strong> - 
                 </div>
                 <div class="card-body">
                     <a href="/home" class="btn btn-primary">Kembali</a>
@@ -18,24 +18,24 @@
                     <br/>
                     
 
-                    <form method="post" action="/backend/updateberita/{{ $berita->id }}" enctype="multipart/form-data">
+                    <form method="post" action="/backend/updatewidget/{{ $widget->id }}" enctype="multipart/form-data">
 
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-
+<fieldset disabled>
                         <div class="form-group">
                             <label>Judul Berita</label>
-                            <input type="text" name="judul" class="form-control" placeholder="Nama pegawai .." value=" {{ $berita->judul }}">
+                            <input type="text" name="judul" class="form-control" placeholder="Nama pegawai .." value=" {{ $widget->nama_widget }}">
 
                           
 
                         </div>
-
+</fieldset>
                         <div class="form-group">
                             <label>Isi Berita</label>
 
                             
 
-                     <textarea class="form-control" name="isi" rows="10">{{ $berita->isi }}</textarea>
+                     <textarea class="form-control" name="isi_widget" rows="10">{{ $widget->isi_widget }}</textarea>
 
                         </div>
 

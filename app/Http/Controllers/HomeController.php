@@ -49,6 +49,21 @@ class HomeController extends Controller {
 		return view('home',['berita' => $berita]);
 	}
 
+	public function cari(Request $request)
+	{
+		// menangkap data pencarian
+		$cari = $request->cari;
+
+    		// mengambil data dari table pegawai sesuai pencarian data
+		$berita = DB::table('berita')
+		->where('judul','like',"%".$cari."%")
+		->paginate();
+
+    		// mengirim data pegawai ke view index
+		return view('home',['berita' => $berita]);
+
+	}
+
 	public function tambahberita()
 	{
 		return view('backend.tambahberita');

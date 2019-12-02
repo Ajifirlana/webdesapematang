@@ -8,7 +8,7 @@
                 </div>
             </div>
             <div class="row">
-            @foreach($berita as $g )
+            @foreach($galeri as $g )
                 <div class="col-sm-6 col-lg-3">
                 
                     <div class="single_blog_item">
@@ -19,7 +19,7 @@
                         <div class="single_text">
                         
                             <div class="single_blog_text">
-                                <h3>{{ str_limit ($g->judul, 30) }}</h3>
+                                <h3>{{ str_limit ($g->caption, 30) }}</h3>
                                 <p>Heart specialist</p>
                             </div>
                         

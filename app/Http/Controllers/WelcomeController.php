@@ -42,10 +42,10 @@ class WelcomeController extends Controller {
 		
 		$berita = Berita::latest()->paginate(5);
 	
-		$recent = Berita::orderBy('created_at','DESC')->take(2)->get() ;
-
-		return view('welcome',['berita' => $berita],['recent' => $recent]);
+		$galeri = Galeri::latest()->orderby('id','desc')->get();
+		return view('welcome' , ['berita' => $berita, 'galeri'=>$galeri]);
 	}
+
 
 	
 

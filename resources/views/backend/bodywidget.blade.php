@@ -25,10 +25,11 @@
                                 </div>
                             @endif
         <table class="table table-bordered">
+        
   <thead>
     <tr>
       <th scope="col">Nama Widget</th>
-      <th scope="col">Isi Widget</th>
+      
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -36,13 +37,12 @@
    @foreach($widget as $b )  
     <tr>
       <th scope="row">{{ str_limit ($b->nama_widget, 50) }}</th>
-<th scope="row">{{ str_limit ($b->isi_widget, 50) }}</th>
-      
+
 
       <th scope="row">
-      <a class="btn btn-primary" href="/backend/tampilgaleri/{{ $b->id }}">TAMPIL</a>
-      <a class="btn btn-success" href="/backend/editgaleri/{{ $b->id }}">EDIT</a>
-      <a class="btn btn-danger" onclick="return confirm('Apakah Anda Yakin Untuk Menghapus Data Ini?')" href="/backend/hapusberita/{{ $b->id }}">HAPUS</a></th>
+     
+      <a class="btn btn-success" href="/backend/editwidget/{{ $b->id }}">EDIT</a>
+   </th>
     </tr>
     @endforeach
   </tbody>

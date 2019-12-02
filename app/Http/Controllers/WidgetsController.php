@@ -23,20 +23,33 @@ class WidgetsController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function create()
-	{
-		//
-	}
+	public function editwidget($id)
+{
+	$widget = Widgets::find($id);
+
+	return view('backend.editwidget',['widget' => $widget]);
+
+}
 
 	/**
 	 * Store a newly created resource in storage.
 	 *
 	 * @return Response
 	 */
-	public function store()
-	{
-		//
-	}
+	public function updatewidget($id, Request $request)
+{
+    $this->validate($request,[
+	   'isi_widget' => 'required'
+    ]);
+
+    $widget = Widgets::find($id);
+    $widget->isi_widget = $request->isi_widget;
+   
+ 
+    $widget->save();
+
+    return redirect('/backend/widget')->with(['success' => 'Data Berhasil Di Edit']);
+}
 
 	/**
 	 * Display the specified resource.

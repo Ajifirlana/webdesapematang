@@ -34,7 +34,7 @@
 
                         <div class="form-group">
     <label for="exampleFormControlTextarea1">Isi Berita</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" name="isi" rows="3"></textarea>
+    <textarea class="form-control" id="exampleFormControlTextarea1" name="isi" rows="10"></textarea>
   </div>
 
                         <div class="form-group">

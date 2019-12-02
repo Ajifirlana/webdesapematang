@@ -44,11 +44,22 @@
       <th scope="row">
       <a class="btn btn-primary" href="/backend/tampilgaleri/{{ $b->id }}">TAMPIL</a>
       <a class="btn btn-success" href="/backend/editgaleri/{{ $b->id }}">EDIT</a>
-      <a class="btn btn-danger" onclick="return confirm('Apakah Anda Yakin Untuk Menghapus Data Ini?')" href="/backend/hapusberita/{{ $b->id }}">HAPUS</a></th>
+      <a class="btn btn-danger" onclick="return confirm('Apakah Anda Yakin Untuk Menghapus Data Ini?')" href="/backend/hapus/{{ $b->id }}">HAPUS</a></th>
     </tr>
     @endforeach
   </tbody>
 </table>
+
+<nav class="blog-pagination justify-content-center d-flex">
+                            <ul class="pagination">
+                               
+                            
+                                   {!! $berita->render() !!}
+                          
+                            
+                              
+                            </ul>
+                        </nav>
 
 
       </div>
