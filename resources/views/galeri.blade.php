@@ -3,7 +3,7 @@
                 <div class="col-xl-8">
                     <div class="section_tittle text-center">
                         <h2>Galeri Foto</h2>
-                        <p>Face replenish sea good winged bearing years air divide wasHave night male also</p>
+                        
                     </div>
                 </div>
             </div>
@@ -13,14 +13,14 @@
                 
                     <div class="single_blog_item">
                         <div class="single_blog_img">
-                            <img src="../uploads/{{$g->image}}" alt="doctor">
+                            <img src="../uploads/{{$g->image}}" width="100px" height="100px">
 
                         </div>
                         <div class="single_text">
                         
                             <div class="single_blog_text">
-                                <h3>{{ str_limit ($g->caption, 30) }}</h3>
-                                <p>Heart specialist</p>
+                                <h3>{{ str_limit ($g->caption, 100) }}</h3>
+                                <p>{{ str_limit ($g->caption, 100) }}</p>
                             </div>
                         
                         </div>
@@ -28,8 +28,9 @@
                     
                 </div>
                 @endforeach
-               
+             
               
               
             </div>
         </div>
+        

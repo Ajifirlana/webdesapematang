@@ -1,5 +1,5 @@
 
-
+<div class="m-dropdown__body">
 <ul class="m-topbar__nav m-nav m-nav--inline">
 					@if (Auth::guest())
 						<li><a href="/auth/login">Login</a></li>
@@ -13,3 +13,4 @@
 						</li>
 					@endif
 				</ul>
+				</div>

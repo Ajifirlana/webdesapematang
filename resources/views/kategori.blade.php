@@ -1,18 +1,16 @@
-  <aside class="single_sidebar_widget post_category_widget">
-                            <h4 class="widget_title">Kategori</h4>
 
+
+                        <aside class="single_sidebar_widget popular_post_widget">
                             
-
-                            <ul class="list cat-list">
-                                <li>
-                                    <a href="#" class="d-flex">
-                                        <p>Maintenance</p>
-                                      
-                                    </a>
-                                </li>
-                               
-                               
-                               
+                           
+                            <div class="media post_item">
+                                <img src="{{asset('uploads/download (1).png')}}" width="300px" height="300px">
+                           
                                 
-                            </ul>
+                            </div>
+                            <h3 align="center"><b> Amrizal</b></h3>
+                            <h3 class="widget_title" align="center">Kepala Desa</h3>
+                     
+                          
+ 
                         </aside>

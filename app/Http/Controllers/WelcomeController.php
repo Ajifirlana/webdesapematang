@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use \Illuminate\Support\Str;
+use Hash;
 use App\Http\Requests;
 use App\Berita;
 use App\Galeri;
+use App\Menu;
+use App\Aparatur;
 
 
 class WelcomeController extends Controller {
@@ -39,12 +42,42 @@ class WelcomeController extends Controller {
 	 */
 	public function index()
 	{
-		
+		$halaman = DB::table('halaman')->get();
+        if(!$halaman){
+            return view('404');
+        }
 		$berita = Berita::latest()->paginate(5);
 	
 		$galeri = Galeri::latest()->orderby('id','desc')->get();
-		return view('welcome' , ['berita' => $berita, 'galeri'=>$galeri]);
+
+		$aparatur = Aparatur::latest()->orderby('id','desc')->get();
+
+		$menu = DB::table('menu')->get();
+
+		return view('welcome', ['halaman' => $halaman],['berita' => $berita, 'galeri'=>$galeri,'aparatur'=>$aparatur,'menu'=>$menu], compact('welcome'));
 	}
+
+	public function bacaselengkapnya($id)
+{
+
+	$berita = Berita::find($id);
+    	$menu = DB::table('menu')->get();
+    	$galeri = Galeri::latest()->orderby('id','desc')->get();
+    	$aparatur = Aparatur::latest()->orderby('id','desc')->get();
+    	
+	return view('bacaselengkapnya',compact('halaman','titlepage'),['berita' => $berita,'menu'=>$menu,'galeri'=>$galeri,'aparatur'=>$aparatur],compact('bacaselengkapnya'));
+
+}
+
+	public function baca_halaman($uuid){
+        $halaman = DB::table('halaman')->where('uuid', $uuid)->first();
+        if(!$halaman){
+            return view('404');
+        }
+       $berita = Berita::latest()->paginate(5);
+        $titlepage = $halaman->judul;
+        return view('baca',compact('halaman','titlepage'),['berita' => $berita]);
+      }
 
 
 	

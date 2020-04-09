@@ -40,7 +40,7 @@ class Authenticate {
 			}
 			else
 			{
-				return redirect()->guest('auth/login');
+				return redirect()->guest('auth/login')->with('alert','Kamu harus login dulu');
 			}
 		}
 

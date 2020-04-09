@@ -1,19 +1,16 @@
 <section id="main-slider" class="blog_area section_padding">
 
-<div class="container" data-interval="1000">
-<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
-<ol class="carousel-inner">
-@foreach($berita as $b )
-        <li data-target="main-slider" data-slide-to="{{ $b['id'] }}" class="carousel-item active"></li>
-        @endforeach
-    </ol>
+<div class="container">
+<div id="my-carousel" class="col-md-8 col-md-offset-2" data-ride="carousel">
 
-  <div class="carousel-inner" data-interval="10000">
+
+  <div id="my-carousel" class="carousel-inner">
 
   @foreach($berita as $b )
     <li data-target="#my-carousel" data-slide-to="{{ $b['id'] }}" class="carousel-item active">
+    <div class="carousel-item {{ 'active'}}">
       <img src="../uploads/{{$b->image}}">
-
+<div>
     </li>
     @endforeach
 
@@ -29,6 +26,7 @@
     
     
   </div>
+
 
   <a class="carousel-control-prev" href="#main-slider" role="button" data-slide="{{ $b['id'] }}">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

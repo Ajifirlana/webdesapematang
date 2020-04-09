@@ -62,6 +62,8 @@ class HomeController extends Controller {
     		// mengirim data pegawai ke view index
 		return view('home',['berita' => $berita]);
 
+		echo json_encode($callback);
+
 	}
 
 	public function tambahberita()
@@ -79,10 +81,16 @@ class HomeController extends Controller {
         $image = $request->file('image');
         $namaFile = $image->getClientOriginalName();
         
+        $thumbImage = Image::make($image->getRealPath())->resize(100, 100);
+
+
+    
         $request->file('image')->move('uploads', $namaFile);
         $do = new Berita($request->all());
         $do->image = $namaFile;
         $do->save();
+
+
     
 
 	return redirect('/backend/tambahberita')->with(['success' => 'Data Berhasil Di Tambah']);

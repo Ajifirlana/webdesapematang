@@ -61,7 +61,7 @@
     <th scope="row">{{ $no }}</th>
       <th scope="row">{{ str_limit ($b->judul, 50) }}</th>
       <th scope="row">{{ str_limit ($b->isi, 50) }}</th>
-<th scope="row"><img src="../uploads/{{$b->image}}" width="100px"></th>
+<th scope="row"><img src="../uploads/{{$b->image}}" width="100px" height="100px"></th>
       
 
       <th scope="row">
@@ -79,11 +79,11 @@
      <div class="container">
 <nav class="blog-pagination justify-content-center d-flex">
                             <ul class="pagination">
-                               
+                              <h1> 
                             
                                    {!! $berita->render() !!}
                           
-                            
+                            </h1>
                               
                             </ul>
                         </nav>

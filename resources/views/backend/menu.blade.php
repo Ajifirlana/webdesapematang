@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <!-- begin::Head -->
@@ -10,7 +9,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
 <!--begin::Web font -->
 <script src="/admintemplate/dashboard/libs/webfont/1.6.16/webfont.js"></script>
-
 <script>
   WebFont.load({
     google: {"families":["Poppins:300,400,500,600,700","Roboto:300,400,500,600,700"]},
@@ -37,6 +35,22 @@
 <script src="/admintemplate/dashboard/assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
 @section("sisip")
 @show
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../../../../../www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37564768-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../../../../../www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37564768-1', 'auto');
+  ga('send', 'pageview');
+</script>
 
 </head>
 
@@ -95,77 +109,16 @@
     <!-- END: Left Aside -->
    
   </div>
-<div class="m-grid__item m-footer">
-  <!--begin::Portlet-->
-  <div class="m-portlet">
-    <div class="m-portlet__head">
-      <div class="m-portlet__head-caption">
-       
-      </div>
-    </div>
 
-    <div class="m-portlet__body">
-       <div align="center" class="m-portlet__head-title">
-          <span class="m-portlet__head-icon m--hide">
-          <i class="la la-gear"></i>
-          </span>
-          <h3 class="m-portlet__head-text">Edit Berita</h3>
-        </div>
-      <div class="col-md-12">
-
-     
-        <form method="post" action="/backend/updateberita/{{ $berita->id }}" enctype="multipart/form-data">
-
-                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-
-                        <div class="form-group">
-                            <label>Judul Berita</label>
-                            <input type="text" name="judul" class="form-control" placeholder="Nama pegawai .." value=" {{ $berita->judul }}">
-
-                          
-
-                        </div>
-
-                        <div class="form-group">
-                            <label>Isi Berita</label>
-
-                            
-
-                     <textarea class="form-control" name="isi" rows="10">{{ $berita->isi }}</textarea>
-
-                        </div>
-
-                     
-
-                        <div class="form-group">
-                            <input type="submit" class="btn btn-success" value="Simpan">
-                        </div>
-
-                    </form>
-
-     <div class="container">
-<nav class="blog-pagination justify-content-center d-flex">
-                            <ul class="pagination">
-                              <h1> 
-                            
-                           
-                            </h1>
-                              
-                            </ul>
-                        </nav>
-</div>                          
-                            
-                            
-
-      </div>
-    </div>
-  </div>
-  <!--end::Portlet-->
-</div>
+      @include("backend.menubody")
 
 
 
-  </div>
+  <!-- end::Footer --></div>
+<!-- end:: Page -->
+<!-- begin::Quick Sidebar -->
+
+
 
 
 <script type="text/javascript">

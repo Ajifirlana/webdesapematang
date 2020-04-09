@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Galeri;
 use App\Berita;
+use App\Aparatur;
 use Illuminate\Http\Request;
 use File;
 use Carbon\Carbon;
@@ -21,9 +22,8 @@ class GaleriController extends Controller {
 	public function index()
 	{
 		$galeri = DB::table('galeri')->paginate(5);
-		$berita = DB::table('berita')->paginate(5);
 
-		return view('backend/galerifoto',['galeri' => $galeri],['berita' => $berita]);
+		return view('backend/galerifoto',['galeri' => $galeri]);
 	}
 
 	/**
@@ -116,13 +116,33 @@ class GaleriController extends Controller {
 public function hapus($id){
 	// hapus file
 	$image = Galeri::where('id',$id)->first();
-	File::delete('uploads/'.$image->file);
-
-	// hapus data
+	File::delete($image);	// hapus data
 	Galeri::where('id',$id)->delete();
 
 	return redirect()->back();
 }
+
+public function cari(Request $request)
+	{
+		// menangkap data pencarian
+		$cari = $request->cari;
+
+    		// mengambil data dari table pegawai sesuai pencarian data
+		$galeri = DB::table('galeri')
+		->where('caption','like',"%".$cari."%")
+		->paginate();
+
+    		// mengirim data pegawai ke view index
+		return view('backend/galerifoto',['galeri' => $galeri]);
+
+	}
+
+	public function aparatur()
+	{
+		$aparatur = DB::table('aparatur')->paginate(5);
+
+		return view('backend/aparatur',['aparatur' => $aparatur]);
+	}
 
 
 	/**

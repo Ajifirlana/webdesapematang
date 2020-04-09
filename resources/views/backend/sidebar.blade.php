@@ -21,6 +21,18 @@
 				<span class="m-menu__link-wrap"><span class="m-menu__link-text">Widget</span></span></a>
 		</li>
 
+		<li class="m-menu__item  " aria-haspopup="true">
+			<a href="{{url('backend/aparatur')}}" class="m-menu__link "><i class="m-menu__link-icon flaticon-line-graph"></i><span class="m-menu__link-title">
+				<span class="m-menu__link-wrap"><span class="m-menu__link-text">Aparatur Desa</span></span></a>
+		</li>
+
+		<li class="m-menu__item  " aria-haspopup="true">
+			<a href="{{url('auth/logout')}}" class="m-menu__link "><i class="m-menu__link-icon flaticon-line-graph"></i><span class="m-menu__link-title">
+				<span class="m-menu__link-wrap"><span class="m-menu__link-text">Log Out</span></span></a>
+		</li>
+
+		
+						
 	
 
 		

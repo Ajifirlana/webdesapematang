@@ -1,21 +1,16 @@
-<link rel="icon" href="{{asset('img/ability_img.png')}}">
-@extends('template')
-
+ 
+ @extends('template')
 
 <body>
 
     @include("menu")
 
-
-
-
-<img src="/img/header.jpg" height="400px" width="2000px">
-    <section class="blog_area section_padding">
+<section class="blog_area section_padding">
         <div class="container">
         <div class="row justify-content-center">
                 <div class="col-xl-3">
                     <div class="section_tittle text-center">
-                        <h2>Berita</h2>
+                        <h2></h2>
                     </div>
                 </div>
             </div>
@@ -23,13 +18,13 @@
 
                 <div class="col-lg-8 mb-5 mb-lg-0">
                     <div class="blog_left_sidebar">
-                        @foreach($berita as $b ) 
+                        
                         <article class="blog_item">
                             <div class="blog_item_img">
                     
-                                <img src="../uploads/{{$b->image}}"  class="card-img rounded-0" width="100px" height="300px">
-                                <a href="/bacaselengkapnya/{{ $b->id }}" class="blog_item_date">
-                                    <h3>{{ str_limit ($b->judul, 100) }}</h3>
+                                
+                                <a href="#" class="blog_item_date">
+                                    <h3>{{$halaman->judul}}</h3>
                                    
                                     
                                 </a>
@@ -39,20 +34,17 @@
                                 <a class="d-inline-block" href="single-blog.html">
                                     <h2></h2>
                                 </a>
-                                <p>{{ str_limit ($b->isi, 500) }}</p>
-                                <ul class="blog-info-link">
-                                   
-                                    <li><a href="/bacaselengkapnya/{{ $b->id }}"><i class="far fa-comments"></i> Baca Selengkapnya</a></li>
-                                </ul>
+                                <p>{!! $halaman->isi !!}</p>
+                                
                             </div>
                         </article>
-@endforeach
+
 <div class="container">
 <nav class="blog-pagination justify-content-center d-flex">
                             <ul class="pagination">
                            
                                 <h1 class="page-item">
-                                    {!! $berita->render() !!}
+                               
                                 </h1>
                             
                            
@@ -62,8 +54,6 @@
 <br></br>
 
 
-
-@include('galeri')
        
 
                         
@@ -71,18 +61,15 @@
                         
                     </div>
                 </div>
+
+
                 <div class="col-lg-4">
                     <div class="blog_right_sidebar">
                         
+   @include('kategori')
+   @include('recenpost')
+                        @include('statistikdesa')
 
-                      @include('kategori')
-
-                        @include('recenpost')
-                      
-@include('statistikdesa')
-@include('aparatur')
-
-@include('agenda')
 
                         
 
@@ -106,9 +93,7 @@
         </div>
     </section>
 
-@include('footer')
-    
-
+   @include('footer')
+<body>
 
 </html>
-

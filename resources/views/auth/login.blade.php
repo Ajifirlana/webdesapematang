@@ -72,6 +72,11 @@
 
 			<!--begin::Signin-->
 			<div class="m-login__signin">
+			@if(\Session::has('alert'))
+                <div class="alert alert-danger">
+                    <div>{{Session::get('alert')}}</div>
+                </div>
+            @endif
 				<div class="m-login__title">
 					<h3>Login dengan Akun Anda</h3>
 				</div>
@@ -108,7 +113,6 @@
 									Login
 								</button>
 
-								<a href="/password/email">Forgot Your Password?</a>
 							</div>
 						</div>
 						
