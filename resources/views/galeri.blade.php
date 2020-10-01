@@ -18,8 +18,8 @@
                         </div>
                         <div class="single_text">
                         
-                            <div class="single_blog_text">
-                                <h3>{{ str_limit ($g->caption, 100) }}</h3>
+                            <div class="single_blog_img">
+                                <h3>{{ str_limit ($g->caption, 10) }}</h3>
                                 <p>{{ str_limit ($g->caption, 100) }}</p>
                             </div>
                         
@@ -28,7 +28,6 @@
                     
                 </div>
                 @endforeach
-             
               
               
             </div>

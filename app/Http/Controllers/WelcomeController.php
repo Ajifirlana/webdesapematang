@@ -46,9 +46,9 @@ class WelcomeController extends Controller {
         if(!$halaman){
             return view('404');
         }
-		$berita = Berita::latest()->paginate(5);
+		$berita = Berita::latest()->paginate(1);
 	
-		$galeri = Galeri::latest()->orderby('id','desc')->get();
+		$galeri = Galeri::latest()->orderby('id','desc')->paginate(8);
 
 		$aparatur = Aparatur::latest()->orderby('id','desc')->get();
 
@@ -62,7 +62,7 @@ class WelcomeController extends Controller {
 
 	$berita = Berita::find($id);
     	$menu = DB::table('menu')->get();
-    	$galeri = Galeri::latest()->orderby('id','desc')->get();
+    	$galeri = Galeri::latest()->orderby('id','desc')->paginate(4);
     	$aparatur = Aparatur::latest()->orderby('id','desc')->get();
     	
 	return view('bacaselengkapnya',compact('halaman','titlepage'),['berita' => $berita,'menu'=>$menu,'galeri'=>$galeri,'aparatur'=>$aparatur],compact('bacaselengkapnya'));
@@ -70,13 +70,15 @@ class WelcomeController extends Controller {
 }
 
 	public function baca_halaman($uuid){
-        $halaman = DB::table('halaman')->where('uuid', $uuid)->first();
+		 
+		 $halaman = DB::table('halaman')->where('uuid', $uuid)->first();
         if(!$halaman){
             return view('404');
         }
+        $galeri = Galeri::latest()->orderby('id','desc')->paginate(4);
        $berita = Berita::latest()->paginate(5);
         $titlepage = $halaman->judul;
-        return view('baca',compact('halaman','titlepage'),['berita' => $berita]);
+        return view('baca',compact('halaman','titlepage'),['berita' => $berita, 'galeri' => $galeri]);
       }
 
 

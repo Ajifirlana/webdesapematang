@@ -1,3 +1,4 @@
+<link rel="icon" href="{{asset('img/ability_img.png')}}">
 @extends('template')
 
 
@@ -8,6 +9,7 @@
 
 
 
+<img src="{{asset('img/header.jpg')}}" height="400px" width="2000px">
     <section class="blog_area section_padding">
         <div class="container">
         <div class="row justify-content-center">
@@ -24,29 +26,33 @@
                        
                         <article class="blog_item">
                             <div class="blog_item_img">
-
-                    <a class="d-inline-block" href="single-blog.html">
-                                
-                               
-                                    <h3 class="blog_item_date">{{ $berita->judul }}</h3>
+                    
+                                <img src="../uploads/{{$berita->image}}"  class="card-img rounded-0" width="100px" height="300px">
+                                <a class="blog_item_date">
+                                    <h3>{{ $berita->judul }}</h3>
                                    
                                     
                                 </a>
                             </div>
 
                             <div class="blog_details">
-                                <a class="d-inline-block">
-                                    <img src="../uploads/{{$berita->image}}"  class="card-img rounded-0" width="1000px" height="300px">
+                                <a class="d-inline-block" href="single-blog.html">
+                                    <h2></h2>
                                 </a>
-                                <p>{{ str_limit ($berita->isi, 500) }}</p>
-                                
+                                <p>{{ $berita->isi }}</p>
+                                <ul class="blog-info-link">
+                                   
+                                    <li><a href="{{'/'}}"><i class="far fa-comments"></i> Kembali</a></li>
+                                </ul>
                             </div>
                         </article>
+
 <div class="container">
 <nav class="blog-pagination justify-content-center d-flex">
                             <ul class="pagination">
                            
                                 <h1 class="page-item">
+                                  
                                 </h1>
                             
                            
@@ -57,7 +63,7 @@
 
 
 
-@section('galeri')
+@include('galeri')
        
 
                         
@@ -68,18 +74,11 @@
                 <div class="col-lg-4">
                     <div class="blog_right_sidebar">
                         
+
                       @include('kategori')
 
-                        <aside class="single_sidebar_widget tag_cloud_widget">
-                            <h4 class="widget_title">Statistik Desa</h4>
-                            <ul class="list">
-                                <li>
-                                    <a href="#">MAINTENANCE</a>
-                                </li>
-                                
-                            </ul>
-                        </aside>
-
+                    
+@include('statistikdesa')
 @include('aparatur')
 
 @include('agenda')

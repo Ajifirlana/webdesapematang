@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 24, 2020 at 09:17 AM
+-- Generation Time: May 11, 2020 at 03:53 AM
 -- Server version: 5.7.21
 -- PHP Version: 5.6.35
 
@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `berita` (
   `updated_at` varchar(100) NOT NULL,
   `create_by` varchar(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=35 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `berita`
@@ -75,7 +75,8 @@ INSERT INTO `berita` (`id`, `judul`, `isi`, `image`, `created_at`, `updated_at`,
 (23, ' Rapat Penting', ' Rapat Penambahan fasilitas untuk kebutuhan desa pematang lima suku', 'rehab-lapangan-sepak-bola-tempat-wisata-warga-desa-rambutan-masam-lapor-inspektorat-batanghari.jpg', '2019-11-19 10:01:27', '2019-11-28 03:45:31', ''),
 (25, 'Sultan Taha di Hulu', 'Belanda tidak berusaha menuntut Sultan Taha. Mereka bahkan sama sekali tidak berusaha masuk atau mencampuri urusan di daerah pedalaman. Mereka sudah puas dapat menguasai daerah pesisir.\r\nDi pedalaman, di dekat muara Soengei Tembesi, Sultan Taha tetap mengejawantahkan kekuasaannya dan para kepala adat setempat hanya mematuhi perintahnya saja, sesuai dengan kebiasaan Melayu.\r\n\r\nHal ini tidak dipahami oleh pegawai-pegawai Belanda yang datang kemudian di Djambi, kecuali bila diasumsikan bahwa selama situasi masih dapat diterima, mereka menganggap tidak perlu mengganggu pemerintah (Hindia-Belanda) dengan keluhan-keluhan (dari lapangan).\r\n\r\nDalam Laporan-laporan Pemerintah (Regeringsverslagen) jarang ada yang menyebut-nyebut nama Sultan Taha. Yang ada adalah tulisan bahwa pada tahun 1860, sultan yang sudah diturunkan dari tahtanya, masih saja berkuasa di pedalaman dan menggunakan pengaruhnya untuk menghalangi transportasi ternak, gading dan komoditi dagang lainnya dari daerah Djambi ke Rawas', 'kj-gambar-20180324_JeHGV4.jpg', '2019-11-19 12:02:34', '2019-11-19 12:02:34', ''),
 (26, ' Detik-detik 4 Prajurit TNI Dikeroyok dan Ditodong Senpi Rakitan di Jambi', 'Empat anggota TNI korban pengeroyokan anggota Serikat Mandiri Batanghari (SMB) di bawah pimpinan Muslim, dihadirkan oleh Jaksa Penuntut Umum (JPU) Kejaksaan Tinggi (Kejati) Jambi dalam sidang yang digelar di Pengadilan Negeri (PN) Jambi, Rabu (20/11/2019).\r\n\r\nKeempat prajurit TNI itu adalah Sertu Zendriawan, Kopda Herliansyah, Koptu Zulhijaz, dan Pratu Riski Pratama. Keterangan saksi diambil untuk terdakwa Muslim, Yohanes, Usman, Dani, dan Bagus Eko.\r\n\r\nKepada majelis hakim, saksi Herliansyah mengungkapkan, ia dan tiga anggota TNI lainnya sedang bertugas memantau Kebakaran Hutan dan Lahan (Karhutla) di Kabupaten Tanjung Jabung Barat (Tanjabbar). Namun, mereka justru mengalami tindak kekerasan.\r\n\r\nMenurut Herliansyah, kekerasan terjadi ketika aksi kedua kelompok SMB di Distrik VIII PT WKS. Aksi pertama terjadi sekitar pukul 11.30 WIB, Muslim bersama puluhan anggotanya sempat diredam. Sehingga Muslim dan sebagian anggotanya membubarkan diri dari lokasi.\r\n', 'o_1av9ng9ej2k3s0n12j8qkp1uvka.jpg', '2019-11-27 10:13:49', '2020-01-17 05:57:39', ''),
-(34, 'Update Corona 23 Maret: 579 Kasus, 49 Meninggal, 30 Sembuh', 'Jumlah pasien positif terinfeksi Virus Corona (Covid-19) kembali  Korban yang meninggal pun meningkat menjadi 49 orang, dengan jumlah yang sembuh mencapai 30 pasien.\r\n\r\n\"Jumlah kasus bertambah 65 dari data kemarin. Sehingga total kasus hari ini menjadi 579 orang,\" ucap juru bicara pemerintah Achmad Yurianto saat konferensi pers di Jakarta yang disiarkan langsung, Senin (23/3).Jumlah ini meningkat dibandingkan dengan  48 Meninggal, dan 29 Sembuh.', 'corona.jpeg', '2020-03-24 08:21:56', '2020-03-24 08:21:56', '');
+(34, 'Update Corona 23 Maret: 579 Kasus, 49 Meninggal, 30 Sembuh', 'Jumlah pasien positif terinfeksi Virus Corona (Covid-19) kembali  Korban yang meninggal pun meningkat menjadi 49 orang, dengan jumlah yang sembuh mencapai 30 pasien.\r\n\r\n\"Jumlah kasus bertambah 65 dari data kemarin. Sehingga total kasus hari ini menjadi 579 orang,\" ucap juru bicara pemerintah Achmad Yurianto saat konferensi pers di Jakarta yang disiarkan langsung, Senin (23/3).Jumlah ini meningkat dibandingkan dengan  48 Meninggal, dan 29 Sembuh.', 'corona.jpeg', '2020-03-24 08:21:56', '2020-03-24 08:21:56', ''),
+(35, ' Pemkab Batang Hari berikan Bantuan Batang Hari Tunai (BBT) untuk 27.407 KK', 'MUARABULIAN - Bupati Batanghari Ir. Syahirsah SY akan memberikan Bantuan Batanghari Tunai (BBT) kepada 27.407 Kepala Keluarga (KK) yang tersebar di delapan kecamatan.\r\n\r\nBupati Batanghari Ir. H. Syahirsah SY mengatakan, ini dilakukan sebagai bentuk kontribusi pemerintah daerah kepada masyarakat yang terkena dampak ekonomi dengan adanya wabah Covid-19.\r\n\r\nDikatakannya, 27.407 KK yang akan menerima bantuan tersebut di luar dari Bantuan Sosial (Bansos) dari pusat. Bantuan tersebut akan diberikan selama tiga bulan terhitung Maret hingga Mei 2020.\r\n\r\n\"Dinas Sosial telah mendata, didapatlah dengan jumlah sekitar 27 ribu KK. Satu KK menerima 150 ribu per bulan. Ini dimulai dari Maret. Artinya bulan Maret akan direalisasikan 50 persen karena terhitung tanggal 15 Maret,\" kata Syahirsah, Rabu (1/4/2020).\r\n\r\nTotal dana yang disiapkan oleh Pemkab Batanghari untuk BBT tersebut mencapai Rp.7,5 miliar per bulan, yang didapat dari dana perjalanan dinas setiap SKPD dan kepala daerah tahun 2020.\r\n\r\n\"Kita siapkan 7,5 miliar dari anggaran empat item yakni perjalanan dinas, Bintek, ATK, dan cetak,\" jelasnya.\r\n\r\nDikatakannya lagi, kriteria KK yang menerima BBT tersebut yakni buruh tani karet, pedagang asongan, dan UMKM.\r\n\r\n\"Yang jelas buruh tani karet karena pabrik karet sudah tutup semua, kemudian pedagang asongan juga. Nah untuk proses penyalurannya teknisnya pihak Bank Jambi nantinya karena tidak boleh ada keramaian,\" bebernya.\r\n\r\n\"Dan tidak menutup kemungkinan bantuan BBT akan ditambah lagi jika situasi lebih genting,\" pungkasnya.', '1389656448_521777025197999_8726155630185807872_n.jpg', '2020-04-09 07:18:58', '2020-04-09 07:21:54', '');
 
 -- --------------------------------------------------------
 
@@ -92,7 +93,7 @@ CREATE TABLE IF NOT EXISTS `galeri` (
   `updated_at` varchar(100) NOT NULL,
   `created_at` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `galeri`
@@ -101,8 +102,9 @@ CREATE TABLE IF NOT EXISTS `galeri` (
 INSERT INTO `galeri` (`id`, `caption`, `jabatan`, `image`, `updated_at`, `created_at`) VALUES
 (3, ' Pelantikan Anggota BPD Desa Pematang Lima Suku 2019-2025', 'Kepala Desa', 'download (1).png', '2019-12-09 08:33:58', '2019-11-27 08:52:40'),
 (4, 'Upacara Peringatan Hari Lahir Pancasila Ke 74 Tahun 2019 Kecamatan Muara Tembesi', 'Kepala Dusun', 'download (1).png', '2019-12-09 08:33:38', '2019-12-02 02:32:11'),
-(8, 'Kunjungan Ibu Bupati Tuban di Kecamatan Muara Tembesi', '', 'sedang_1572408761_WhatsApp Image 2019-10-30 at 10.42.49 AM.jpeg', '2019-12-09 08:34:48', '2019-12-09 06:19:58'),
-(10, 'Kepala Desa Pematang Lima Suku Resmi Membuka Pelatihan Miniatur APE', '', '20c.jpg', '2020-02-14 03:27:33', '2020-02-14 03:27:33');
+(8, ' Kunjungan Bapak Bupati Batanghari di Kecamatan Muara Tembesi', '', 'sedang_1572408761_WhatsApp Image 2019-10-30 at 10.42.49 AM.jpeg', '2020-05-11 02:46:43', '2019-12-09 06:19:58'),
+(10, 'Kepala Desa Pematang Lima Suku Resmi Membuka Pelatihan Miniatur APE', '', '20c.jpg', '2020-02-14 03:27:33', '2020-02-14 03:27:33'),
+(11, 'Waspada Covid 19', '', 'corona.jpeg', '2020-04-09 04:40:20', '2020-04-09 04:40:20');
 
 -- --------------------------------------------------------
 
@@ -273,7 +275,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'amrizal', 'pematang@test.com', '$2y$10$SNneaOELM1vRMj5w9.xptOhH1roXvJWW.nLS9OGdWpsxA4Z1birHG', 'acswTowdy78Uao3BrIhMbVhwYbzZEMi2Soym31Vx3Yp1Wjg7hWgh66Yer08h', '2019-06-18 02:48:14', '2020-03-24 01:34:10');
+(1, 'amrizal', 'pematang@test.com', '$2y$10$SNneaOELM1vRMj5w9.xptOhH1roXvJWW.nLS9OGdWpsxA4Z1birHG', 'oieVp3girZXGz1AQTa5DQtu4e0UiFqCoeP42e1BtTi6bFb0hfB3li9Jwjryz', '2019-06-18 02:48:14', '2020-04-21 21:07:46');
 
 -- --------------------------------------------------------
 

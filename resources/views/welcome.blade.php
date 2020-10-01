@@ -1,4 +1,4 @@
-<link rel="icon" href="{{asset('img/ability_img.png')}}">
+
 @extends('template')
 
 
@@ -47,6 +47,7 @@
                             </div>
                         </article>
 @endforeach
+
 <div class="container">
 <nav class="blog-pagination justify-content-center d-flex">
                             <ul class="pagination">

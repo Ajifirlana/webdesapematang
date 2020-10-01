@@ -4,6 +4,7 @@
 <body>
 
     @include("menu")
+<img src="{{asset('img/header.jpg')}}" height="400px" width="2000px">
 
 <section class="blog_area section_padding">
         <div class="container">
@@ -51,7 +52,7 @@
                             </ul>
                         </nav>
 </div>
-<br></br>
+@include('galeri')
 
 
        

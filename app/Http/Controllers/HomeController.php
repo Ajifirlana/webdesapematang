@@ -76,6 +76,7 @@ class HomeController extends Controller {
 
 	$this->validate($request, [
             'image' => 'required|image|mimes:jpg,png,jpeg|max:2048',
+            'judul' => 'required|min:5|max:100',
             ]);
 
         $image = $request->file('image');

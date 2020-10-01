@@ -41,13 +41,16 @@
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <!-- owl carousel js -->
     <script src="{{asset('js/owl.carousel.min.js')}}"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <!-- contact js -->
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="js/jquery.form.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/mail-script.js"></script>
-    <script src="js/contact.js"></script>
-    <!-- custom js -->
-    <script src="js/custom.js"></script>
+    
+    
+    <script src="{{asset('js/jquery.nice-select.min.js')}}"></script>
+    
+    <script src="{{asset('js/jquery.ajaxchimp.min.js')}}"></script>
+    <script src="{{asset('js/jquery.form.js')}}"></script>
+    
+    <script src="{{asset('js/jquery.validate.min.js')}}"></script>
+    <script src="{{asset('js/mail-script.js')}}"></script>
+    <script src="{{asset('js/contact.js')}}"></script>
+    
+    <script src="{{asset('js/custom.js')}}"></script>
 </html>
