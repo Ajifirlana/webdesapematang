@@ -150,7 +150,7 @@
                         
 
                         </div>
-
+                        <input type="text" name="uuid" class="form-control" row="5">
                      
                         <div class="form-group">
                             <label>Gambar</label>

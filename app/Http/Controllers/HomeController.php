@@ -12,7 +12,8 @@ use File;
 use Carbon\Carbon;
 use Cookie;
 use Session;
-
+use Ramsey\Uuid\Uuid;
+use Ramsey\Uuid\Exception\UnsatisfiedDependencyException;
 class HomeController extends Controller {
 
 	/*
@@ -96,10 +97,11 @@ class HomeController extends Controller {
 
 	return redirect('/backend/tambahberita')->with(['success' => 'Data Berhasil Di Tambah']);
 	Session::flash('success','Data Berhasil Di Tambah');
-
+	$faker = Faker\Factory::create('id_ID');
 	DB::table('berita')->insert([
 		'judul' => $request->judul,
 		'isi' => $request->isi,
+		'uuid' => $faker->uuid,
 		'created_at' => $request->created_at,
 		'image' => $request->image,
 	
