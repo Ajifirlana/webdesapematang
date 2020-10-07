@@ -78,6 +78,7 @@ class HomeController extends Controller {
 	$this->validate($request, [
             'image' => 'required|image|mimes:jpg,png,jpeg|max:2048',
             'judul' => 'required|min:5|max:100',
+            'uuid' => Uuid::uuid4()->getHex(),
             ]);
 
         $image = $request->file('image');
@@ -97,11 +98,11 @@ class HomeController extends Controller {
 
 	return redirect('/backend/tambahberita')->with(['success' => 'Data Berhasil Di Tambah']);
 	Session::flash('success','Data Berhasil Di Tambah');
-	$faker = Faker\Factory::create('id_ID');
+	
 	DB::table('berita')->insert([
 		'judul' => $request->judul,
 		'isi' => $request->isi,
-		'uuid' => $faker->uuid,
+		'uuid' => Uuid::uuid4()->getHex(),
 		'created_at' => $request->created_at,
 		'image' => $request->image,
 	
