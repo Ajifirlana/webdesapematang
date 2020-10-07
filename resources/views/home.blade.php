@@ -70,22 +70,7 @@
   </div>
 
 
-<script type="text/javascript">
-    $base_url = '{{url("/")}}';
-</script>
 
-<script src="{{asset('js/bootbox.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('js/jquery.dataTables.min.js')}}"></script>
-<script src="js/datatables.bundle.js" type="text/javascript"></script>
-<script src="{{asset('js/bootstrap-notify.js')}}"></script>
-<script src="{{asset('js/jquery.form.min.js')}}"></script>
-<script src="{{asset('js/jquery.mask.min.js')}}"></script>
-<script src="{{asset('js/jquery.validate.min.js')}}"></script>
-<script src="{{asset('js/select2.min.js')}}"></script>
-<script src="{{asset('js/jquery.number.min.js')}}"></script>
-<script src="{{asset('js/moment-with-locales.js')}}"></script>
-<script src="{{asset('js/bootstrap-datetimepicker.js')}}"></script>
-<script src="{{asset('js/init.js')}}"></script>
 @section("js")
 @show
 </body>

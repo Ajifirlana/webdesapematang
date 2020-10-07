@@ -21,7 +21,7 @@ class GaleriController extends Controller {
 	 */
 	public function index()
 	{
-		$galeri = DB::table('galeri')->paginate(5);
+		$galeri = DB::table('galeri')->paginate(3);
 
 		return view('backend/galerifoto',['galeri' => $galeri]);
 	}
