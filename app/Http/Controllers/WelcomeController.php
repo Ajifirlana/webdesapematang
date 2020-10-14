@@ -46,7 +46,7 @@ class WelcomeController extends Controller {
         if(!$halaman){
             return view('404');
         }
-		$berita = Berita::latest()->paginate(1);
+		$berita = Berita::latest()->paginate(5);
 	
 		$galeri = Galeri::latest()->orderby('id','desc')->paginate(8);
 
