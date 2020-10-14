@@ -9,14 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
 <!--begin::Web font -->
 <script src="/admintemplate/dashboard/libs/webfont/1.6.16/webfont.js"></script>
-<script>
-  WebFont.load({
-    google: {"families":["Poppins:300,400,500,600,700","Roboto:300,400,500,600,700"]},
-    active: function() {
-        sessionStorage.fonts = true;
-    }
-  });
-</script>
+
 <!--end::Web font -->
 <!--begin::Base Styles -->
 <link href="/admintemplate/dashboard/assets/vendors/custom/datatables/datatables.bundle.css'" rel="stylesheet" type="text/css"/>
@@ -35,22 +28,7 @@
 <script src="/admintemplate/dashboard/assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
 @section("sisip")
 @show
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','../../../../../../../www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-37564768-1', 'auto');
-  ga('send', 'pageview');
-</script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','../../../../../../../www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-37564768-1', 'auto');
-  ga('send', 'pageview');
-</script>
+
 
 </head>
 
@@ -121,22 +99,6 @@
 
 
 
-<script type="text/javascript">
-    $base_url = '{{url("/")}}';
-</script>
-
-<script src="{{asset('js/bootbox.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('js/jquery.dataTables.min.js')}}"></script>
-<script src="{{asset('dashboard/assets/vendors/custom/datatables/datatables.bundle.js')}}" type="text/javascript"></script>
-<script src="{{asset('js/bootstrap-notify.js')}}"></script>
-<script src="{{asset('js/jquery.form.min.js')}}"></script>
-<script src="{{asset('js/jquery.mask.min.js')}}"></script>
-<script src="{{asset('js/jquery.validate.min.js')}}"></script>
-<script src="{{asset('js/select2.min.js')}}"></script>
-<script src="{{asset('js/jquery.number.min.js')}}"></script>
-<script src="{{asset('js/moment-with-locales.js')}}"></script>
-<script src="{{asset('js/bootstrap-datetimepicker.js')}}"></script>
-<script src="{{asset('js/init.js')}}"></script>
 @section("js")
 @show
 </body>
