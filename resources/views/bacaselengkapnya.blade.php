@@ -1,5 +1,5 @@
-<link rel="icon" href="{{asset('img/ability_img.png')}}">
-@extends('template')
+
+@include('template')
 
 
 <body>

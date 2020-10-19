@@ -24,14 +24,8 @@
     <link rel="stylesheet" href="{{asset('css/slick.css')}}">
    
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
-    
-</head>
+        
 
-  
-
-    <!-- footer part end-->
-
-    <!-- jquery plugins here-->
 
     <script src="{{asset('js/jquery-1.12.1.min.js')}}"></script>
     <!-- popper js -->
@@ -52,4 +46,11 @@
     <script src="{{asset('js/contact.js')}}"></script>
     
     <script src="{{asset('js/custom.js')}}"></script>
-</html>
+
+</head>
+
+  
+
+    <!-- footer part end-->
+
+    <!-- jquery plugins here-->

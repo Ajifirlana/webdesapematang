@@ -30,7 +30,7 @@ $rootmenu = DB::select("SELECT a.*, b.uuid as uuid_halaman from
     @foreach($rootmenu as $r)
         @if($r->tipe=='direktori')
             <li class="dropdown">
-                <a class="nav-link" href="#">{{$r->judul}}</a>
+                <a class="btn" href="#">{{$r->judul}}</a>
                 <?php 
                     $has_child1 = DB::table('tree_menu')->where('id_induk', $r->id_node)->count() > 0;
                     $id_node1 = $r->id_node;
@@ -85,7 +85,7 @@ $rootmenu = DB::select("SELECT a.*, b.uuid as uuid_halaman from
         @endif
         @if($r->tipe=='page')
             <li>
-                <a href="{{url('baca-halaman/'.$r->uuid_halaman)}}">{{$r->judul}}</a>
+                <a class="btn" href="{{url('baca-halaman/'.$r->uuid_halaman)}}">{{$r->judul}}</a>
             </li>
         @endif
         @if($r->tipe=='url')
