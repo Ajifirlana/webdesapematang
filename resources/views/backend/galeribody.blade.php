@@ -8,6 +8,12 @@
     </div>
 
     <div class="m-portlet__body">
+
+@if (session('success'))
+                                <div class="alert alert-success">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
        <div align="center" class="m-portlet__head-title">
           <span class="m-portlet__head-icon m--hide">
           <i class="la la-gear"></i>
@@ -20,12 +26,6 @@
         <i class="la la-plus"></i> Upload Foto 
         </a>
 
-        <hr>
- @if (session('success'))
-                                <div class="alert alert-success">
-                                    {{ session('success') }}
-                                </div>
-                            @endif
   <table class="table table-bordered" border="0">
 <thead>
     
@@ -69,16 +69,18 @@
   </tbody>
 </table>
 
+<div class="container">
 <nav class="blog-pagination justify-content-center d-flex">
                             <ul class="pagination">
-                               
+                              <h1> 
                             
                                    {!! $galeri->render() !!}
                           
-                            
+                            </h1>
                               
                             </ul>
                         </nav>
+</div>  
 
 
       </div>
