@@ -62,7 +62,7 @@
     <!-- END: Left Aside -->
    
   </div>
-   
+
       @include("backend.body")
 
 
@@ -71,8 +71,6 @@
 
 
 
-@section("js")
-@show
 </body>
 
 <ul class="m-topbar__nav m-nav m-nav--inline">

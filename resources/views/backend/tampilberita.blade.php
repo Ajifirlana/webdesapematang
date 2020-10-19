@@ -4,40 +4,7 @@
 <!-- begin::Head -->
 <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
 <head>
-<meta charset="utf-8"/>
-<title>Web Administrator </title>
-<meta name="description" content="Form repeater examples">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
-<!--begin::Web font -->
-<script src="/admintemplate/dashboard/libs/webfont/1.6.16/webfont.js"></script>
-
-<script>
-  WebFont.load({
-    google: {"families":["Poppins:300,400,500,600,700","Roboto:300,400,500,600,700"]},
-    active: function() {
-        sessionStorage.fonts = true;
-    }
-  });
-</script>
-<!--end::Web font -->
-<!--begin::Base Styles -->
-<link href="/admintemplate/dashboard/assets/vendors/custom/datatables/datatables.bundle.css'" rel="stylesheet" type="text/css"/>
-<link href="/admintemplate/dashboard/assets/vendors/base/vendors.bundle.css" rel="stylesheet" type="text/css"/>
-<link href="/admintemplate/dashboard/assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css"/>
-<link href="/admintemplate/css/animate.css" rel="stylesheet">
-<link href="/admintemplate/css/line-awesome.min.css" rel="stylesheet">
-<link href="/admintemplate/css/font-awesome.css" rel="stylesheet">
-<link href="/admintemplate/css/select2.min.css" rel="stylesheet">
-<link href="/admintemplate/css/select2-bootstrap.min.css" rel="stylesheet">
- 
-<link href="/admintemplate/css/notify.css" rel="stylesheet">
-<!--end::Base Styles -->
-<link rel="shortcut icon" href="/admintemplate/'dashboard/assets/demo/default/media/img/logo/favicon.ico"/>
-<script src="/admintemplate/dashboard/assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
-<script src="/admintemplate/dashboard/assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
-@section("sisip")
-@show
-
+@include('backend.template')
 </head>
 
 <body class="m-page--fluid m--skin- m-content--skin-light2 m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--fixed m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default">
@@ -167,25 +134,6 @@
 
   </div>
 
-
-<script type="text/javascript">
-    $base_url = '{{url("/")}}';
-</script>
-
-<script src="{{asset('js/bootbox.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('js/jquery.dataTables.min.js')}}"></script>
-<script src="{{asset('dashboard/assets/vendors/custom/datatables/datatables.bundle.js')}}" type="text/javascript"></script>
-<script src="{{asset('js/bootstrap-notify.js')}}"></script>
-<script src="{{asset('js/jquery.form.min.js')}}"></script>
-<script src="{{asset('js/jquery.mask.min.js')}}"></script>
-<script src="{{asset('js/jquery.validate.min.js')}}"></script>
-<script src="{{asset('js/select2.min.js')}}"></script>
-<script src="{{asset('js/jquery.number.min.js')}}"></script>
-<script src="{{asset('js/moment-with-locales.js')}}"></script>
-<script src="{{asset('js/bootstrap-datetimepicker.js')}}"></script>
-<script src="{{asset('js/init.js')}}"></script>
-@section("js")
-@show
 </body>
 
 <ul class="m-topbar__nav m-nav m-nav--inline">
