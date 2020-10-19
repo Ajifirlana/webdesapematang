@@ -21,7 +21,7 @@
         </div>
       <div class="col-md-12">
 
-      <a href="backend/tambahberita" class="btn btn-success">
+      <a href="{{url('backend/tambahberita')}}" class="btn btn-success">
         <i class="la la-plus"></i> Berita Baru
         </a>
         <hr>

@@ -62,11 +62,7 @@
     <!-- END: Left Aside -->
    
   </div>
-   @if (session('success'))
-                                <div class="alert alert-success">
-                                    {{ session('success') }}
-                                </div>
-                            @endif
+   
       @include("backend.body")
 
 
