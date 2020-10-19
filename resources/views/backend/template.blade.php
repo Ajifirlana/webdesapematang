@@ -19,9 +19,4 @@
  
 <link href="{{asset('admintemplate/css/notify.css')}}" rel="stylesheet">
 <!--end::Base Styles -->
-<link rel="shortcut icon" href="admintemplate/'dashboard/assets/demo/default/media/img/logo/favicon.ico"/>
-<script src="admintemplate/dashboard/assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
-<script src="/admintemplate/dashboard/assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
-@section("sisip")
-@show
 
