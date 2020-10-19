@@ -132,7 +132,10 @@ public function updateberita($id, Request $request)
     $berita->isi = $request->isi;
  
     $berita->save();
-    return redirect('/home');
+
+	Session::flash('success','Data Berhasil Di Tambah');
+	
+    return redirect('/home')->with(['success' => 'Data Berhasil Di Edit']);
 }
 
 public function tampilberita($id)

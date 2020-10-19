@@ -8,6 +8,11 @@
     </div>
 
     <div class="m-portlet__body">
+      @if (session('success'))
+                                <div class="alert alert-success">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
        <div align="center" class="m-portlet__head-title">
           <span class="m-portlet__head-icon m--hide">
           <i class="la la-gear"></i>

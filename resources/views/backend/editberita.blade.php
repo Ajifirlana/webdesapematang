@@ -72,6 +72,7 @@
     </div>
 
     <div class="m-portlet__body">
+     
        <div align="center" class="m-portlet__head-title">
           <span class="m-portlet__head-icon m--hide">
           <i class="la la-gear"></i>
@@ -135,24 +136,6 @@
   </div>
 
 
-<script type="text/javascript">
-    $base_url = '{{url("/")}}';
-</script>
-
-<script src="{{asset('js/bootbox.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('js/jquery.dataTables.min.js')}}"></script>
-<script src="{{asset('dashboard/assets/vendors/custom/datatables/datatables.bundle.js')}}" type="text/javascript"></script>
-<script src="{{asset('js/bootstrap-notify.js')}}"></script>
-<script src="{{asset('js/jquery.form.min.js')}}"></script>
-<script src="{{asset('js/jquery.mask.min.js')}}"></script>
-<script src="{{asset('js/jquery.validate.min.js')}}"></script>
-<script src="{{asset('js/select2.min.js')}}"></script>
-<script src="{{asset('js/jquery.number.min.js')}}"></script>
-<script src="{{asset('js/moment-with-locales.js')}}"></script>
-<script src="{{asset('js/bootstrap-datetimepicker.js')}}"></script>
-<script src="{{asset('js/init.js')}}"></script>
-@section("js")
-@show
 </body>
 
 <ul class="m-topbar__nav m-nav m-nav--inline">
