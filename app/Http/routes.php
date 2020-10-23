@@ -13,7 +13,7 @@
 Route::get('/cari', 'WelcomeController@cari');
 Route::get('/', 'WelcomeController@index');
 Route::get('/baca-halaman/{uuid}', 'WelcomeController@baca_halaman');
-Route::get('/bacaselengkapnya/{id}','WelcomeController@bacaselengkapnya');
+Route::get('/baca_selengkapnya/{uuid}','WelcomeController@baca_selengkapnya');
 
 Route::get('home', 'HomeController@index');
 Route::get('home/cari','HomeController@cari');

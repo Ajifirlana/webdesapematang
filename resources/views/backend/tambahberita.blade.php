@@ -138,6 +138,19 @@
                         </div>
 
                         <div class="form-group">
+
+                          <?php 
+            $karakter ='1234567890-abcdefghijklmnopqrstuvwxyz';
+            $shuffle = str_shuffle($karakter);
+            ?>
+                           
+                            <input type="hidden" name="uuid" class="form-control" placeholder="UUID .." value="{{ $shuffle }}">
+
+                          
+
+                        </div>
+
+                        <div class="form-group">
     <label for="exampleFormControlTextarea1">Isi Berita</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" name="isi" rows="10"></textarea>
   </div>
@@ -150,8 +163,6 @@
                         
 
                         </div>
-                        <input type="text" name="uuid" class="form-control" row="5">
-                     
                         <div class="form-group">
                             <label>Gambar</label>
                             <input type="file" name="image" class="form-control">

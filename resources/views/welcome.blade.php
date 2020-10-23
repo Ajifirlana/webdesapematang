@@ -28,7 +28,7 @@
                             <div class="blog_item_img">
                     
                                 <img src="../uploads/{{$b->image}}"  class="card-img rounded-0" width="100px" height="300px">
-                                <a href="/bacaselengkapnya/{{ $b->id }}" class="blog_item_date">
+                                <a href="/baca_selengkapnya/{{ $b->uuid }}" class="blog_item_date">
                                     <h3>{{ str_limit ($b->judul, 100) }}</h3>
                                    
                                     
@@ -42,7 +42,7 @@
                                 <p>{{ str_limit ($b->isi, 500) }}</p>
                                 <ul class="blog-info-link">
                                    
-                                    <li><a href="/bacaselengkapnya/{{ $b->id }}"><i class="far fa-comments"></i> Baca Selengkapnya</a></li>
+                                    <li><a href="/baca_selengkapnya/{{ $b->uuid }}"><i class="far fa-comments"></i> Baca Selengkapnya</a></li>
                                 </ul>
                             </div>
                         </article>

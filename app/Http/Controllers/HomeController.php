@@ -78,7 +78,7 @@ class HomeController extends Controller {
 	$this->validate($request, [
             'image' => 'required|image|mimes:jpg,png,jpeg|max:2048',
             'judul' => 'required|min:5|max:100',
-            'uuid' => Uuid::uuid4()->getHex(),
+            'uuid' => 'required|min:5|max:100',
             ]);
 
         $image = $request->file('image');
@@ -97,12 +97,12 @@ class HomeController extends Controller {
     
 
 	return redirect('/backend/tambahberita')->with(['success' => 'Data Berhasil Di Tambah']);
-	Session::flash('success','Data Berhasil Di Tambah');
+	Session::flash('success','Berita Berhasil Di Tambah');
 	
 	DB::table('berita')->insert([
 		'judul' => $request->judul,
 		'isi' => $request->isi,
-		'uuid' => Uuid::uuid4()->getHex(),
+		'uuid' => $request->uuid,
 		'created_at' => $request->created_at,
 		'image' => $request->image,
 	
@@ -124,18 +124,20 @@ public function updateberita($id, Request $request)
 {
     $this->validate($request,[
 	   'judul' => 'required',
+	   'uuid' => 'required',
 	   'isi' => 'required'
     ]);
 
     $berita = Berita::find($id);
     $berita->judul = $request->judul;
+    $berita->uuid = $request->uuid;
     $berita->isi = $request->isi;
  
     $berita->save();
 
 	Session::flash('success','Data Berhasil Di Tambah');
 	
-    return redirect('/home')->with(['success' => 'Data Berhasil Di Edit']);
+    return redirect('/home')->with(['success' => 'Berita Berhasil Di Edit']);
 }
 
 public function tampilberita($id)
@@ -149,12 +151,14 @@ public function tampilberita($id)
 
 	public function hapusberita($id){
 	
-	$image = Berita::where('id',$id)->first();
-	File::delete('uploads'.$image->file);
-
-	Berita::where('id',$id)->delete();
-
-	return redirect()->back();
+		$match = Berita::find($id);
+        $match->delete();
+        File::delete(public_path().'/uploads/' . $match->flag_1); // untuk menghapus file nya
+        File::delete(public_path().'/uploads/' . $match->flag_2);  // untuk menghapus file nya
+        return redirect()->with(['success' => 'Berita Berhasil Di Hapus'])->back();
+     
+	
+	
 }
 
 

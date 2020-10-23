@@ -95,6 +95,19 @@
                         </div>
 
                         <div class="form-group">
+
+                          <?php 
+            $karakter ='1234567890-abcdefghijklmnopqrstuvwxyz';
+            $shuffle = str_shuffle($karakter);
+            ?>
+                           
+                            <input type="hidden" name="uuid" class="form-control" placeholder="Nama pegawai .." value="{{ $shuffle }}">
+
+                          
+
+                        </div>
+
+                        <div class="form-group">
                             <label>Isi Berita</label>
 
                             

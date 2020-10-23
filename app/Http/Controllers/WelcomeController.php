@@ -57,15 +57,19 @@ class WelcomeController extends Controller {
 		return view('welcome', ['halaman' => $halaman],['berita' => $berita, 'galeri'=>$galeri,'aparatur'=>$aparatur,'menu'=>$menu], compact('welcome'));
 	}
 
-	public function bacaselengkapnya($id)
+	public function baca_selengkapnya($uuid)
 {
 
-	$berita = Berita::find($id);
+	$berita = DB::table('berita')->where('uuid', $uuid)->first();
+        if(!$berita){
+            return redirect()->back();
+        }
+
     	$menu = DB::table('menu')->get();
     	$galeri = Galeri::latest()->orderby('id','desc')->paginate(4);
     	$aparatur = Aparatur::latest()->orderby('id','desc')->get();
     	
-	return view('bacaselengkapnya',compact('halaman','titlepage'),['berita' => $berita,'menu'=>$menu,'galeri'=>$galeri,'aparatur'=>$aparatur],compact('bacaselengkapnya'));
+	return view('bacaselengkapnya',compact('halaman','titlepage'),['berita' => $berita,'menu'=>$menu,'galeri'=>$galeri,'aparatur'=>$aparatur],compact('baca_selengkapnya'));
 
 }
 

@@ -32,6 +32,7 @@
                     <div class="col-xl-3 col-sm-6 col-md-6 single-footer-widget">
                         <h4>Peta Desa Pematang Lima Suku</h4>
                         <p><div class="d-none d-sm-block mb-5 pb-4">
+                          
         <div id="map" style="height: 180px;"></div>
         <script>
           function initMap() {
@@ -58,8 +59,8 @@
             ];
             var map = new google.maps.Map(document.getElementById('map'), {
               center: {
-                lat: -31.197,
-                lng: 150.744
+                lat: -1.6968091,
+                lng: 103.1013908
               },
               zoom: 9,
               styles: grayStyles,
