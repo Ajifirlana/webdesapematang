@@ -87,7 +87,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Disko
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 </p>
                     <div class="col-lg-4 col-md-12 text-center text-lg-right footer-social">
-                        <a href="#"><i class="ti-facebook"></i></a>
+                        <a href="https://www.facebook.com/groups/957038434687409"><i class="ti-facebook"></i></a>
                         <a href="#"> <i class="ti-twitter"></i> </a>
                         <a href="#"><i class="ti-instagram"></i></a>
                         <a href="#"><i class="ti-skype"></i></a>
