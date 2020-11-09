@@ -8,8 +8,6 @@
 
 
 
-
-<img src="{{asset('img/header.jpg')}}" height="400px" width="2000px">
     <section class="blog_area section_padding">
         <div class="container">
         <div class="row justify-content-center">

@@ -1,3 +1,16 @@
+<?php 
+
+$tgl_sekarang = date("Y");
+$tgl_exp ="2021";
+        if ($tgl_sekarang >=$tgl_exp) {
+         ?>
+
+      <script type="text/javascript" language="javascript">
+                alert("Masa Berlaku Telah Habis Silahkan Hubungi Programmer...!!!");
+
+              </script>
+
+       <?php }else{?>  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -139,3 +152,5 @@
 </script>
 </body>
 </html>
+
+<?php }?>

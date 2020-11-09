@@ -6,23 +6,18 @@
 
     @include("menu")
 
+  <section class="blog_area section_padding">
 
-
-
-<img src="/img/header.jpg" height="400px" width="2000px">
-    <section class="blog_area section_padding">
         <div class="container">
-        <div class="row justify-content-center">
-                <div class="col-xl-3">
-                    <div class="section_tittle text-center">
-                        <h2>Berita</h2>
-                    </div>
-                </div>
-            </div>
+     
             <div class="row">
 
                 <div class="col-lg-8 mb-5 mb-lg-0">
                     <div class="blog_left_sidebar">
+
+                          <h4 class="widget_title">Berita Desa</h4>
+                           
+                    
                         @foreach($berita as $b ) 
                         <article class="blog_item">
                             <div class="blog_item_img">

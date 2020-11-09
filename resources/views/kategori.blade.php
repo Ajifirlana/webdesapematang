@@ -4,7 +4,7 @@
                             
                            
                             <div class="media post_item">
-                                <img src="{{asset('uploads/download (1).png')}}" width="300px" height="300px">
+                                <img src="{{asset('uploads/download (1).png')}}" class="card-img rounded-0" width="300px" height="300px">
                            
                                 
                             </div>

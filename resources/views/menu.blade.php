@@ -8,6 +8,8 @@
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
                         <a class="navbar-brand" href="{{'/'}}"> <img src="{{asset('img/ability_img.png')}}" width="50px" alt="logo"> </a>
+                        <ul class="navbar-nav align-items-center"><li>Pematang Lima Suku</li>
+                            </ul>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -119,3 +121,7 @@ $rootmenu = DB::select("SELECT a.*, b.uuid as uuid_halaman from
             </div>
         </div>
     </header>
+
+
+<img src="{{asset('img/header.jpg')}}" class="card-img rounded-0">
+  

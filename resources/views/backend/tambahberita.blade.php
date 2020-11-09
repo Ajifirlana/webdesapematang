@@ -117,6 +117,13 @@
        <form action="/backend/tambahberitastore" method="POST" enctype="multipart/form-data">
 <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
+
+                          <?php 
+            $karakter ='1234567890';
+            $konver = str_shuffle($karakter);
+            ?>
+<input type="text" name="id" value="{{ $konver }}">
+
                             @if (session('success'))
                                 <div class="alert alert-success">
                                     {{ session('success') }}
