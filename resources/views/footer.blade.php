@@ -22,7 +22,7 @@
                         <h4>Temukan Kami di:</h4>
                         <div class="social_icon">
                                 <ul>
-                                    <li><a href="#"> <i class="ti-facebook"></i>facebook </a></li>
+                                    <li><a href="https://caramengatasimasalahmu.blogspot.com/2019/12/web-desa-dinamis-menggunkan-laravel.html"> <i class="ti-facebook"></i>facebook </a></li>
                                     <li><a href="#"> <i class="ti-twitter-alt"></i> twitter</a></li>
                                     <li><a href="#"> <i class="ti-instagram"></i> </a>instagram</li>
                                     <li><a href="#"> <i class="ti-skype"></i> Skype</a></li>
