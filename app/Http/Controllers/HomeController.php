@@ -76,8 +76,7 @@ class HomeController extends Controller {
 {
 
 	$this->validate($request, [
-            'id' => 'required|min:5|max:100',
-            'image' => 'required|image|mimes:jpg,png,jpeg|max:2048',
+           'image' => 'required|image|mimes:jpg,png,jpeg|max:2048',
             'judul' => 'required|min:5|max:100',
             'uuid' => 'required|min:5|max:100',
             ]);
@@ -101,7 +100,6 @@ class HomeController extends Controller {
 	Session::flash('success','Berita Berhasil Di Tambah');
 	
 	DB::table('berita')->insert([
-		'id' => $request->id,
 		'judul' => $request->judul,
 		'isi' => $request->isi,
 		'uuid' => $request->uuid,
@@ -153,14 +151,11 @@ public function tampilberita($id)
 
 	public function hapusberita($id){
 	
-		$match = Berita::find($id);
-        $match->delete();
-        File::delete(public_path().'/uploads/' . $match->flag_1); // untuk menghapus file nya
-        File::delete(public_path().'/uploads/' . $match->flag_2);  // untuk menghapus file nya
-        return redirect()->with(['success' => 'Berita Berhasil Di Hapus'])->back();
+		$gambar = Berita::where('id',$id)->first();
+        File::delete('uploads/'.$gambar->file);
+        Berita::where('id',$id)->delete();
+        return redirect()->back();
      
-	
-	
 }
 
 

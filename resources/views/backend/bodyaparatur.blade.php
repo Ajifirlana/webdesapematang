@@ -66,7 +66,10 @@
                             </ul>
                         </nav>
 </div>                          
-                            
+        
+        <div align="center" ><a href="https://www.facebook.com/profile.phpid100014986094346"target="_blank">Untuk Mendapatkan fitur edit aparatur di harapkan melakukan donasi ke rek silahkan berdonasi ke rek 
+bank jambi
+3002234164</a></div>                    
                             
 
       </div>

@@ -118,13 +118,7 @@
 <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 
-                          <?php 
-            $karakter ='1234567890';
-            $konver = str_shuffle($karakter);
-            ?>
-<input type="text" name="id" value="{{ $konver }}">
-
-                            @if (session('success'))
+                             @if (session('success'))
                                 <div class="alert alert-success">
                                     {{ session('success') }}
                                 </div>
@@ -159,7 +153,7 @@
 
                         <div class="form-group">
     <label for="exampleFormControlTextarea1">Isi Berita</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" name="isi" rows="10"></textarea>
+    <textarea class="form-control" name="isi" rows="10"></textarea>
   </div>
 
                         <div class="form-group">
