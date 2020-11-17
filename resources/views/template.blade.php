@@ -49,8 +49,4 @@
 
 </head>
 
-  
 
-    <!-- footer part end-->
-
-    <!-- jquery plugins here-->

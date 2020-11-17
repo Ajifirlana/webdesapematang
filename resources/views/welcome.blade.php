@@ -31,7 +31,7 @@
                             </div>
 
                             <div class="blog_details">
-                                <a class="d-inline-block" href="single-blog.html">
+                                <a class="d-inline-block" href="/baca_selengkapnya/{{ $b->uuid }}">
                                     <h2></h2>
                                 </a>
                                 <p>{{ str_limit ($b->isi, 500) }}</p>

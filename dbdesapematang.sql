@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: May 11, 2020 at 03:53 AM
--- Server version: 5.7.21
--- PHP Version: 5.6.35
+-- Host: 127.0.0.1
+-- Generation Time: Nov 17, 2020 at 05:03 AM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -28,23 +27,23 @@ SET time_zone = "+00:00";
 -- Table structure for table `aparatur`
 --
 
-DROP TABLE IF EXISTS `aparatur`;
-CREATE TABLE IF NOT EXISTS `aparatur` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `aparatur` (
+  `id` int(11) NOT NULL,
   `nama` varchar(100) NOT NULL,
   `jabatan` varchar(100) NOT NULL,
   `image` varchar(100) NOT NULL,
   `created_at` varchar(100) NOT NULL,
-  `updated_at` varchar(100) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+  `updated_at` varchar(100) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `aparatur`
 --
 
 INSERT INTO `aparatur` (`id`, `nama`, `jabatan`, `image`, `created_at`, `updated_at`) VALUES
-(1, 'Amrizal', 'Kepala Desa', '\r\ndownload (1).png', '', '');
+(1, 'Amrizal', 'Kepala Desa', '\r\ndownload (1).png', '', ''),
+(2, 'Erma', 'Staff', 'kj-gambar-20180324_JeHGV4.jpg', '', ''),
+(3, 'Holidi', 'staff', 'holidi.jpg', '', '');
 
 -- --------------------------------------------------------
 
@@ -52,31 +51,29 @@ INSERT INTO `aparatur` (`id`, `nama`, `jabatan`, `image`, `created_at`, `updated
 -- Table structure for table `berita`
 --
 
-DROP TABLE IF EXISTS `berita`;
-CREATE TABLE IF NOT EXISTS `berita` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `berita` (
+  `id` int(11) NOT NULL,
   `judul` varchar(100) NOT NULL,
   `isi` varchar(10000) NOT NULL,
   `image` varchar(100) DEFAULT NULL,
   `created_at` varchar(100) NOT NULL,
   `updated_at` varchar(100) NOT NULL,
   `create_by` varchar(10) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=latin1;
+  `uuid` varchar(100) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `berita`
 --
 
-INSERT INTO `berita` (`id`, `judul`, `isi`, `image`, `created_at`, `updated_at`, `create_by`) VALUES
-(20, 'Pelatihan Jurnalistik 2020', '30 Oktober 2019 diadakan pelatihan jurnalistik di Gedung LPSE Pemkab Tuban, pelatihan tersebut di ikuti oleh 17 peserta yang merupakan admin website Desa dan juga blogger. Narasumber pelatihan adalah Ibu Nur Hidayah seorang penulis buku yang sudah beberapa kali lintas Negara. Beliau mengajarkan bagaimana cara menulis berita yang benar serta menarik minat pembaca, beliau juga menjelaskan beberapa kesalahan yang sering dilakukan penulis berita. Selain itu jika ingin mendapatkan bimbingan belajar lebih lanjut.', 'sedang_1572408761_WhatsApp Image 2019-10-30 at 10.42.49 AM.jpeg', '2019-11-19 07:56:23', '2020-01-17 05:52:30', ''),
-(21, '   Rehab Lapangan Sepak Bola di desa pematang lima suku', 'Rehab Lapangan Sepak Bola & Tempat Wisata, Warga Desa Rambutan Masam, Lapor Inspektorat Batanghari- Sejumlah warga dari Desa Rambutan Masam, Kecamatan Muara Tembesi, Kabupaten Batanghari, Jumat (11/7/2019), mendatangi Kantor Inspektorat Kabupaten Batanghari.Kedatangan mereka tersebut, terkait perihal pembangunan di Desa Rambutan Masam. Seperti rehab lapangan sepak bola yang mengunakan Dana Desa (DD) tahun 2018 dan pembangunan desa wisata yang ada di desa tersebut.Artikel ini telah tayang di Tribunjambi.com dengan judul Rehab Lapangan Sepak Bola & Tempat Wisata, Warga Desa Rambutan Masam, Lapor Inspektorat Batanghari,', 'rehab-lapangan-sepak-bola-tempat-wisata-warga-desa-rambutan-masam-lapor-inspektorat-batanghari.jpg', '2019-11-19 07:59:04', '2020-03-24 07:29:41', ''),
-(22, 'Rumah Papan di Pematang Gadung Terbakar', 'Sebuah rumah semi permanen di Desa Pematang Gadung, Kecamatan Mersam, Kabupaten Batanghari, Rabu (21/2) malam, hangus terbakar.\r\nRumah yang diketahui milik Muhammad Saleh (79) itu terbakar, diduga konsleting listrik. Namun, tidak ada korban jiwa dalam musibah itu.\r\nDia mengatakan, tak ada yang tersisa dari kebakaran dari rumah yang dihuni oleh dua orang kepala keluarga itu.\r\n\"Kerugian ditaksir mencapai Rp 80 juta. Emas 4 suku, senilai Rp 20 juta dan surat-surat berharga lainnya ikut hangus,\" jelasnya', '21022019_rumah-terbakar.jpg', '2019-11-19 08:03:59', '2020-03-24 04:40:06', ''),
-(23, ' Rapat Penting', ' Rapat Penambahan fasilitas untuk kebutuhan desa pematang lima suku', 'rehab-lapangan-sepak-bola-tempat-wisata-warga-desa-rambutan-masam-lapor-inspektorat-batanghari.jpg', '2019-11-19 10:01:27', '2019-11-28 03:45:31', ''),
-(25, 'Sultan Taha di Hulu', 'Belanda tidak berusaha menuntut Sultan Taha. Mereka bahkan sama sekali tidak berusaha masuk atau mencampuri urusan di daerah pedalaman. Mereka sudah puas dapat menguasai daerah pesisir.\r\nDi pedalaman, di dekat muara Soengei Tembesi, Sultan Taha tetap mengejawantahkan kekuasaannya dan para kepala adat setempat hanya mematuhi perintahnya saja, sesuai dengan kebiasaan Melayu.\r\n\r\nHal ini tidak dipahami oleh pegawai-pegawai Belanda yang datang kemudian di Djambi, kecuali bila diasumsikan bahwa selama situasi masih dapat diterima, mereka menganggap tidak perlu mengganggu pemerintah (Hindia-Belanda) dengan keluhan-keluhan (dari lapangan).\r\n\r\nDalam Laporan-laporan Pemerintah (Regeringsverslagen) jarang ada yang menyebut-nyebut nama Sultan Taha. Yang ada adalah tulisan bahwa pada tahun 1860, sultan yang sudah diturunkan dari tahtanya, masih saja berkuasa di pedalaman dan menggunakan pengaruhnya untuk menghalangi transportasi ternak, gading dan komoditi dagang lainnya dari daerah Djambi ke Rawas', 'kj-gambar-20180324_JeHGV4.jpg', '2019-11-19 12:02:34', '2019-11-19 12:02:34', ''),
-(26, ' Detik-detik 4 Prajurit TNI Dikeroyok dan Ditodong Senpi Rakitan di Jambi', 'Empat anggota TNI korban pengeroyokan anggota Serikat Mandiri Batanghari (SMB) di bawah pimpinan Muslim, dihadirkan oleh Jaksa Penuntut Umum (JPU) Kejaksaan Tinggi (Kejati) Jambi dalam sidang yang digelar di Pengadilan Negeri (PN) Jambi, Rabu (20/11/2019).\r\n\r\nKeempat prajurit TNI itu adalah Sertu Zendriawan, Kopda Herliansyah, Koptu Zulhijaz, dan Pratu Riski Pratama. Keterangan saksi diambil untuk terdakwa Muslim, Yohanes, Usman, Dani, dan Bagus Eko.\r\n\r\nKepada majelis hakim, saksi Herliansyah mengungkapkan, ia dan tiga anggota TNI lainnya sedang bertugas memantau Kebakaran Hutan dan Lahan (Karhutla) di Kabupaten Tanjung Jabung Barat (Tanjabbar). Namun, mereka justru mengalami tindak kekerasan.\r\n\r\nMenurut Herliansyah, kekerasan terjadi ketika aksi kedua kelompok SMB di Distrik VIII PT WKS. Aksi pertama terjadi sekitar pukul 11.30 WIB, Muslim bersama puluhan anggotanya sempat diredam. Sehingga Muslim dan sebagian anggotanya membubarkan diri dari lokasi.\r\n', 'o_1av9ng9ej2k3s0n12j8qkp1uvka.jpg', '2019-11-27 10:13:49', '2020-01-17 05:57:39', ''),
-(34, 'Update Corona 23 Maret: 579 Kasus, 49 Meninggal, 30 Sembuh', 'Jumlah pasien positif terinfeksi Virus Corona (Covid-19) kembali  Korban yang meninggal pun meningkat menjadi 49 orang, dengan jumlah yang sembuh mencapai 30 pasien.\r\n\r\n\"Jumlah kasus bertambah 65 dari data kemarin. Sehingga total kasus hari ini menjadi 579 orang,\" ucap juru bicara pemerintah Achmad Yurianto saat konferensi pers di Jakarta yang disiarkan langsung, Senin (23/3).Jumlah ini meningkat dibandingkan dengan  48 Meninggal, dan 29 Sembuh.', 'corona.jpeg', '2020-03-24 08:21:56', '2020-03-24 08:21:56', ''),
-(35, ' Pemkab Batang Hari berikan Bantuan Batang Hari Tunai (BBT) untuk 27.407 KK', 'MUARABULIAN - Bupati Batanghari Ir. Syahirsah SY akan memberikan Bantuan Batanghari Tunai (BBT) kepada 27.407 Kepala Keluarga (KK) yang tersebar di delapan kecamatan.\r\n\r\nBupati Batanghari Ir. H. Syahirsah SY mengatakan, ini dilakukan sebagai bentuk kontribusi pemerintah daerah kepada masyarakat yang terkena dampak ekonomi dengan adanya wabah Covid-19.\r\n\r\nDikatakannya, 27.407 KK yang akan menerima bantuan tersebut di luar dari Bantuan Sosial (Bansos) dari pusat. Bantuan tersebut akan diberikan selama tiga bulan terhitung Maret hingga Mei 2020.\r\n\r\n\"Dinas Sosial telah mendata, didapatlah dengan jumlah sekitar 27 ribu KK. Satu KK menerima 150 ribu per bulan. Ini dimulai dari Maret. Artinya bulan Maret akan direalisasikan 50 persen karena terhitung tanggal 15 Maret,\" kata Syahirsah, Rabu (1/4/2020).\r\n\r\nTotal dana yang disiapkan oleh Pemkab Batanghari untuk BBT tersebut mencapai Rp.7,5 miliar per bulan, yang didapat dari dana perjalanan dinas setiap SKPD dan kepala daerah tahun 2020.\r\n\r\n\"Kita siapkan 7,5 miliar dari anggaran empat item yakni perjalanan dinas, Bintek, ATK, dan cetak,\" jelasnya.\r\n\r\nDikatakannya lagi, kriteria KK yang menerima BBT tersebut yakni buruh tani karet, pedagang asongan, dan UMKM.\r\n\r\n\"Yang jelas buruh tani karet karena pabrik karet sudah tutup semua, kemudian pedagang asongan juga. Nah untuk proses penyalurannya teknisnya pihak Bank Jambi nantinya karena tidak boleh ada keramaian,\" bebernya.\r\n\r\n\"Dan tidak menutup kemungkinan bantuan BBT akan ditambah lagi jika situasi lebih genting,\" pungkasnya.', '1389656448_521777025197999_8726155630185807872_n.jpg', '2020-04-09 07:18:58', '2020-04-09 07:21:54', '');
+INSERT INTO `berita` (`id`, `judul`, `isi`, `image`, `created_at`, `updated_at`, `create_by`, `uuid`) VALUES
+(38, 'Unik! Warga Manfaatkan Banjir untuk Belajar Berenang', 'ini', 'test.jpg', '2020-10-23 04:55:07', '2020-10-23 04:55:07', '', 'dvfjzpgn9erb42wcmyq5hk18sa60ix73-lotu'),
+(22, 'Rumah Papan di Pematang Gadung Terbakar', 'Sebuah rumah semi permanen di Desa Pematang Gadung, Kecamatan Mersam, Kabupaten Batanghari, Rabu (21/2) malam, hangus terbakar.\r\nRumah yang diketahui milik Muhammad Saleh (79) itu terbakar, diduga konsleting listrik. Namun, tidak ada korban jiwa dalam musibah itu.\r\nDia mengatakan, tak ada yang tersisa dari kebakaran dari rumah yang dihuni oleh dua orang kepala keluarga itu.\r\n\"Kerugian ditaksir mencapai Rp 80 juta. Emas 4 suku, senilai Rp 20 juta dan surat-surat berharga lainnya ikut hangus,\" jelasnya', '21022019_rumah-terbakar.jpg', '2019-11-19 08:03:59', '2020-03-24 04:40:06', '', ''),
+(23, 'Rapat Penting', ' Rapat Penambahan fasilitas untuk kebutuhan desa pematang lima suku', 'rehab-lapangan-sepak-bola-tempat-wisata-warga-desa-rambutan-masam-lapor-inspektorat-batanghari.jpg', '2019-11-19 10:01:27', '2020-10-23 04:07:52', '', 'm-kpl3ycb6e42d97wx85uofz0jis1htaqgnvr'),
+(25, 'Sultan Taha di Hulu', 'Belanda tidak berusaha menuntut Sultan Taha. Mereka bahkan sama sekali tidak berusaha masuk atau mencampuri urusan di daerah pedalaman. Mereka sudah puas dapat menguasai daerah pesisir.\r\nDi pedalaman, di dekat muara Soengei Tembesi, Sultan Taha tetap mengejawantahkan kekuasaannya dan para kepala adat setempat hanya mematuhi perintahnya saja, sesuai dengan kebiasaan Melayu.\r\n\r\nHal ini tidak dipahami oleh pegawai-pegawai Belanda yang datang kemudian di Djambi, kecuali bila diasumsikan bahwa selama situasi masih dapat diterima, mereka menganggap tidak perlu mengganggu pemerintah (Hindia-Belanda) dengan keluhan-keluhan (dari lapangan).\r\n\r\nDalam Laporan-laporan Pemerintah (Regeringsverslagen) jarang ada yang menyebut-nyebut nama Sultan Taha. Yang ada adalah tulisan bahwa pada tahun 1860, sultan yang sudah diturunkan dari tahtanya, masih saja berkuasa di pedalaman dan menggunakan pengaruhnya untuk menghalangi transportasi ternak, gading dan komoditi dagang lainnya dari daerah Djambi ke Rawas', 'kj-gambar-20180324_JeHGV4.jpg', '2019-11-19 12:02:34', '2019-11-19 12:02:34', '', ''),
+(26, 'Detik-detik 4 Prajurit TNI Dikeroyok dan Ditodong Senpi Rakitan di Jambi', 'Empat anggota TNI korban pengeroyokan anggota Serikat Mandiri Batanghari (SMB) di bawah pimpinan Muslim, dihadirkan oleh Jaksa Penuntut Umum (JPU) Kejaksaan Tinggi (Kejati) Jambi dalam sidang yang digelar di Pengadilan Negeri (PN) Jambi, Rabu (20/11/2019).\r\n\r\nKeempat prajurit TNI itu adalah Sertu Zendriawan, Kopda Herliansyah, Koptu Zulhijaz, dan Pratu Riski Pratama. Keterangan saksi diambil untuk terdakwa Muslim, Yohanes, Usman, Dani, dan Bagus Eko.\r\n\r\nKepada majelis hakim, saksi Herliansyah mengungkapkan, ia dan tiga anggota TNI lainnya sedang bertugas memantau Kebakaran Hutan dan Lahan (Karhutla) di Kabupaten Tanjung Jabung Barat (Tanjabbar). Namun, mereka justru mengalami tindak kekerasan.\r\n\r\nMenurut Herliansyah, kekerasan terjadi ketika aksi kedua kelompok SMB di Distrik VIII PT WKS. Aksi pertama terjadi sekitar pukul 11.30 WIB, Muslim bersama puluhan anggotanya sempat diredam. Sehingga Muslim dan sebagian anggotanya membubarkan diri dari lokasi.\r\n', 'o_1av9ng9ej2k3s0n12j8qkp1uvka.jpg', '2019-11-27 10:13:49', '2020-10-23 06:26:26', '', 'tokwcueznj20dq9xh54gl687-1rvpyfb3asmi'),
+(34, 'Update Corona 23 Maret: 579 Kasus, 49 Meninggal, 30 Sembuh', 'Jumlah pasien positif terinfeksi Virus Corona (Covid-19) kembali  Korban yang meninggal pun meningkat menjadi 49 orang, dengan jumlah yang sembuh mencapai 30 pasien.\r\n\r\n\"Jumlah kasus bertambah 65 dari data kemarin. Sehingga total kasus hari ini menjadi 579 orang,\" ucap juru bicara pemerintah Achmad Yurianto saat konferensi pers di Jakarta yang disiarkan langsung, Senin (23/3).Jumlah ini meningkat dibandingkan dengan  48 Meninggal, dan 29 Sembuh.', 'corona.jpeg', '2020-03-24 08:21:56', '2020-10-23 04:51:40', '', 'jb9yn2k1zcgfwo53qemdlriaux4t-v78hp60s'),
+(35, ' Pemkab Batang Hari berikan Bantuan Batang Hari Tunai (BBT) untuk 27.407 KK', 'MUARABULIAN - Bupati Batanghari Ir. Syahirsah SY akan memberikan Bantuan Batanghari Tunai (BBT) kepada 27.407 Kepala Keluarga (KK) yang tersebar di delapan kecamatan.\r\n\r\nBupati Batanghari Ir. H. Syahirsah SY mengatakan, ini dilakukan sebagai bentuk kontribusi pemerintah daerah kepada masyarakat yang terkena dampak ekonomi dengan adanya wabah Covid-19.\r\n\r\nDikatakannya, 27.407 KK yang akan menerima bantuan tersebut di luar dari Bantuan Sosial (Bansos) dari pusat. Bantuan tersebut akan diberikan selama tiga bulan terhitung Maret hingga Mei 2020.\r\n\r\n\"Dinas Sosial telah mendata, didapatlah dengan jumlah sekitar 27 ribu KK. Satu KK menerima 150 ribu per bulan. Ini dimulai dari Maret. Artinya bulan Maret akan direalisasikan 50 persen karena terhitung tanggal 15 Maret,\" kata Syahirsah, Rabu (1/4/2020).\r\n\r\nTotal dana yang disiapkan oleh Pemkab Batanghari untuk BBT tersebut mencapai Rp.7,5 miliar per bulan, yang didapat dari dana perjalanan dinas setiap SKPD dan kepala daerah tahun 2020.\r\n\r\n\"Kita siapkan 7,5 miliar dari anggaran empat item yakni perjalanan dinas, Bintek, ATK, dan cetak,\" jelasnya.\r\n\r\nDikatakannya lagi, kriteria KK yang menerima BBT tersebut yakni buruh tani karet, pedagang asongan, dan UMKM.\r\n\r\n\"Yang jelas buruh tani karet karena pabrik karet sudah tutup semua, kemudian pedagang asongan juga. Nah untuk proses penyalurannya teknisnya pihak Bank Jambi nantinya karena tidak boleh ada keramaian,\" bebernya.\r\n\r\n\"Dan tidak menutup kemungkinan bantuan BBT akan ditambah lagi jika situasi lebih genting,\" pungkasnya.', '1389656448_521777025197999_8726155630185807872_n.jpg', '2020-04-09 07:18:58', '2020-04-09 07:21:54', '', 'fc9ecea9-b96f-4d28-a5d0');
 
 -- --------------------------------------------------------
 
@@ -84,23 +81,21 @@ INSERT INTO `berita` (`id`, `judul`, `isi`, `image`, `created_at`, `updated_at`,
 -- Table structure for table `galeri`
 --
 
-DROP TABLE IF EXISTS `galeri`;
-CREATE TABLE IF NOT EXISTS `galeri` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `galeri` (
+  `id` int(11) NOT NULL,
   `caption` varchar(1000) NOT NULL,
   `jabatan` varchar(50) NOT NULL,
   `image` varchar(1000) DEFAULT NULL,
   `updated_at` varchar(100) NOT NULL,
-  `created_at` varchar(100) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+  `created_at` varchar(100) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `galeri`
 --
 
 INSERT INTO `galeri` (`id`, `caption`, `jabatan`, `image`, `updated_at`, `created_at`) VALUES
-(3, ' Pelantikan Anggota BPD Desa Pematang Lima Suku 2019-2025', 'Kepala Desa', 'download (1).png', '2019-12-09 08:33:58', '2019-11-27 08:52:40'),
+(3, ' Pelantikan Anggota BPD Desa Pematang Lima Suku 2019-2025', 'Kepala Desa', 'download (1).png', '2020-10-19 11:42:46', '2019-11-27 08:52:40'),
 (4, 'Upacara Peringatan Hari Lahir Pancasila Ke 74 Tahun 2019 Kecamatan Muara Tembesi', 'Kepala Dusun', 'download (1).png', '2019-12-09 08:33:38', '2019-12-02 02:32:11'),
 (8, ' Kunjungan Bapak Bupati Batanghari di Kecamatan Muara Tembesi', '', 'sedang_1572408761_WhatsApp Image 2019-10-30 at 10.42.49 AM.jpeg', '2020-05-11 02:46:43', '2019-12-09 06:19:58'),
 (10, 'Kepala Desa Pematang Lima Suku Resmi Membuka Pelatihan Miniatur APE', '', '20c.jpg', '2020-02-14 03:27:33', '2020-02-14 03:27:33'),
@@ -112,19 +107,16 @@ INSERT INTO `galeri` (`id`, `caption`, `jabatan`, `image`, `updated_at`, `create
 -- Table structure for table `halaman`
 --
 
-DROP TABLE IF EXISTS `halaman`;
-CREATE TABLE IF NOT EXISTS `halaman` (
-  `id_halaman` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `halaman` (
+  `id_halaman` int(11) NOT NULL,
   `judul` varchar(250) NOT NULL,
   `isi` text NOT NULL,
   `created_at` datetime NOT NULL,
   `create_by` varchar(60) NOT NULL,
   `updated_at` datetime NOT NULL,
   `update_by` varchar(60) NOT NULL,
-  `uuid` varchar(120) NOT NULL,
-  PRIMARY KEY (`id_halaman`) USING BTREE,
-  KEY `uuid_index` (`uuid`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+  `uuid` varchar(120) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 --
 -- Dumping data for table `halaman`
@@ -167,16 +159,14 @@ INSERT INTO `halaman` (`id_halaman`, `judul`, `isi`, `created_at`, `create_by`, 
 -- Table structure for table `menu`
 --
 
-DROP TABLE IF EXISTS `menu`;
-CREATE TABLE IF NOT EXISTS `menu` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `menu` (
+  `id` int(11) NOT NULL,
   `id_induk` int(11) NOT NULL,
   `nama` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `icon` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `url` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `created_at` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `created_at` varchar(100) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `menu`
@@ -193,8 +183,7 @@ INSERT INTO `menu` (`id`, `id_induk`, `nama`, `icon`, `url`, `created_at`) VALUE
 -- Table structure for table `migrations`
 --
 
-DROP TABLE IF EXISTS `migrations`;
-CREATE TABLE IF NOT EXISTS `migrations` (
+CREATE TABLE `migrations` (
   `migration` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -205,17 +194,14 @@ CREATE TABLE IF NOT EXISTS `migrations` (
 -- Table structure for table `tree_menu`
 --
 
-DROP TABLE IF EXISTS `tree_menu`;
-CREATE TABLE IF NOT EXISTS `tree_menu` (
+CREATE TABLE `tree_menu` (
   `id_node` varchar(120) NOT NULL,
   `id_induk` varchar(120) DEFAULT NULL,
   `judul` varchar(255) DEFAULT NULL,
   `tipe` enum('direktori','page','url','root') DEFAULT NULL,
   `id_halaman` int(12) DEFAULT NULL COMMENT 'Id Halaman tbl Halaman',
   `url` varchar(255) DEFAULT NULL,
-  `urutan` int(12) DEFAULT NULL,
-  PRIMARY KEY (`id_node`) USING BTREE,
-  KEY `id_induk` (`id_induk`) USING BTREE
+  `urutan` int(12) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 --
@@ -258,24 +244,22 @@ INSERT INTO `tree_menu` (`id_node`, `id_induk`, `judul`, `tipe`, `id_halaman`, `
 -- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
-  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+CREATE TABLE `users` (
+  `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'amrizal', 'pematang@test.com', '$2y$10$SNneaOELM1vRMj5w9.xptOhH1roXvJWW.nLS9OGdWpsxA4Z1birHG', 'oieVp3girZXGz1AQTa5DQtu4e0UiFqCoeP42e1BtTi6bFb0hfB3li9Jwjryz', '2019-06-18 02:48:14', '2020-04-21 21:07:46');
+(1, 'amrizal', 'pematang@test.com', '$2y$10$SNneaOELM1vRMj5w9.xptOhH1roXvJWW.nLS9OGdWpsxA4Z1birHG', '1OStVWLZ8vC9O2EcORlKADowvtG7x8rXIyF2ro9xoi9laDeVzocFwjaDtfIY', '2019-06-18 02:48:14', '2020-11-16 09:31:40');
 
 -- --------------------------------------------------------
 
@@ -283,8 +267,7 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `creat
 -- Table structure for table `widget`
 --
 
-DROP TABLE IF EXISTS `widget`;
-CREATE TABLE IF NOT EXISTS `widget` (
+CREATE TABLE `widget` (
   `id` int(10) NOT NULL,
   `nama_widget` varchar(100) NOT NULL,
   `isi_widget` varchar(10000) NOT NULL,
@@ -299,6 +282,94 @@ CREATE TABLE IF NOT EXISTS `widget` (
 INSERT INTO `widget` (`id`, `nama_widget`, `isi_widget`, `created_at`, `updated_at`) VALUES
 (1, 'Bottom Widget', '<div class=\"heading heading-primary heading-border heading-bottom-border\">\r\n  <h4 class=\"heading-default\">Website <strong>Terkait</strong></h4>sds\r\n</div>\r\n<div class=\"owl-carousel\" id=\"owl1\" owl-theme owl-loaded>\r\n    <div>\r\n    	<a href=\"http://batangharikab.go.id\">aa\r\n    		<img src=\"http://nakertrans.batangharikab.go.id/upload/media/1550672963230995.png\" class=\"img img-thumbnail img-responsive\">\r\n  		</a>\r\n	</div>\r\n  	<div>\r\n    	<a href=\"http://lpse.batangharikab.go.id/\">\r\n    		<img src=\"http://nakertrans.batangharikab.go.id/upload/media/1550732737669249.png\" class=\"img img-thumbnail img-responsive\">\r\n  		</a>\r\n  	</div>\r\n  	<div>\r\n    	<a href=\"https://sirup.lkpp.go.id/sirup/ro/rekap/klpd/D85\">\r\n    		<img src=\"http://nakertrans.batangharikab.go.id/upload/media/1550732197276377.png\" class=\"img img-thumbnail img-responsive\">\r\n  		</a>\r\n  	</div>\r\n  	<div>\r\n    	<a href=\"http://sakip.batangharikab.go.id/portal/home\">\r\n    		<img src=\"http://nakertrans.batangharikab.go.id/upload/media/1550732626310157.png\" class=\"img img-thumbnail img-responsive\">\r\n  		</a>\r\n  	</div>\r\n  	<div>\r\n    	<a href=\"http://ppid.batangharikab.go.id/\">\r\n    		<img src=\"http://nakertrans.batangharikab.go.id/upload/media/1550733638331244.png\" class=\"img img-thumbnail img-responsive\">\r\n  		</a>\r\n  	</div>\r\n  	<div>\r\n    	<a href=\"http://jdih.batangharikab.go.id/home\">\r\n    		<img src=\"http://nakertrans.batangharikab.go.id/upload/media/1550734431166376.png\" class=\"img img-thumbnail img-responsive\">\r\n  		</a>\r\n  	</div>\r\n  	<div>\r\n    	<a href=\"http://kemnaker.go.id/\">\r\n    		<img src=\"http://nakertrans.batangharikab.go.id/upload/media/1550734773522237.png\" class=\"img img-thumbnail img-responsive\">\r\n  		</a>\r\n  	</div>\r\n</div>\r\n<script>\r\n  $(function(){\r\n  	var owl1 = $(\'#owl1\');\r\n    owl1.owlCarousel({\r\n    loop:true,\r\n    margin:20,\r\n    autoplay:true,\r\n    autoplayTimeout:5000,\r\n  	responsiveClass:true,\r\n  	responsive:{\r\n        		0:{\r\n            		items:1,\r\n            		nav:false\r\n        		},\r\n        		600:{\r\n            		items:3,\r\n            		nav:false\r\n        		},\r\n        		1000:{\r\n            	items:5,\r\n           	 		nav:false,\r\n            		loop:false\r\n        		}\r\n    		}\r\n      	});\r\n  	});\r\n \r\n</script>\r\n', NULL, '2019-12-08 23:20:47'),
 (2, 'Side Widget', 'Side Widget Test', '2019-12-01 17:00:00', '2020-01-30 00:20:40');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `aparatur`
+--
+ALTER TABLE `aparatur`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `berita`
+--
+ALTER TABLE `berita`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `galeri`
+--
+ALTER TABLE `galeri`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `halaman`
+--
+ALTER TABLE `halaman`
+  ADD PRIMARY KEY (`id_halaman`) USING BTREE,
+  ADD KEY `uuid_index` (`uuid`) USING BTREE;
+
+--
+-- Indexes for table `menu`
+--
+ALTER TABLE `menu`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tree_menu`
+--
+ALTER TABLE `tree_menu`
+  ADD PRIMARY KEY (`id_node`) USING BTREE,
+  ADD KEY `id_induk` (`id_induk`) USING BTREE;
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `aparatur`
+--
+ALTER TABLE `aparatur`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `berita`
+--
+ALTER TABLE `berita`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+
+--
+-- AUTO_INCREMENT for table `galeri`
+--
+ALTER TABLE `galeri`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `halaman`
+--
+ALTER TABLE `halaman`
+  MODIFY `id_halaman` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+
+--
+-- AUTO_INCREMENT for table `menu`
+--
+ALTER TABLE `menu`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
