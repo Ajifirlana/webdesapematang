@@ -6,17 +6,17 @@
 
     @include("menu")
 
-  <section class="blog_area section_padding">
+    <section class="regervation_part section_padding">
 
         <div class="container">
      
             <div class="row">
 
                 <div class="col-lg-8 mb-5 mb-lg-0">
+
+
                     <div class="blog_left_sidebar">
 
-                          <h4 class="widget_title">Berita Desa</h4>
-                           
                     
                         @foreach($berita as $b ) 
                         <article class="blog_item">
@@ -37,7 +37,7 @@
                                 <p>{{ str_limit ($b->isi, 500) }}</p>
                                 <ul class="blog-info-link">
                                    
-                                    <li><a href="/baca_selengkapnya/{{ $b->uuid }}"><i class="far fa-comments"></i> Baca Selengkapnya</a></li>
+                                    <li><a href="/baca_selengkapnya/{{ $b->uuid }}"><i class="far fa-comments"></i>+ Baca Selengkapnya</a></li>
                                 </ul>
                             </div>
                         </article>
@@ -83,7 +83,7 @@
                         
 
 
-
+<!-- Aside -->
                         <aside class="single_sidebar_widget newsletter_widget">
                             <h4 class="widget_title">Informasi Layanan</h4>
 
@@ -96,6 +96,9 @@
                                     type="submit">Subscribe</button>
                             </form>
                         </aside>
+
+                        <!-- Aside Tutup -->
+
                     </div>
                 </div>
             </div>

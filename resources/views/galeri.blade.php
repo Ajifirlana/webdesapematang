@@ -1,4 +1,5 @@
- <div class="container">
+ <div class="blog_details">
+    <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-8">
                     <div class="section_tittle text-center">
@@ -20,7 +21,7 @@
                         
                             <div class="single_blog_img">
                                 <h3>{{ str_limit ($g->caption, 10) }}</h3>
-                                <p>{{ str_limit ($g->caption, 100) }}</p>
+                                <p>{{ str_limit ($g->caption, 10) }}</p>
                             </div>
                         
                         </div>
@@ -32,4 +33,4 @@
               
             </div>
         </div>
-        
+        </div>

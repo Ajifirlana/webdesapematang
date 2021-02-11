@@ -8,7 +8,7 @@
 
 
 
-    <section class="blog_area section_padding">
+    <section class="regervation_part section_padding">
         <div class="container">
         <div class="row justify-content-center">
                 <div class="col-xl-3">

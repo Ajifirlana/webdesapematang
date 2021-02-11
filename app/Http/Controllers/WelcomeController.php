@@ -76,13 +76,15 @@ class WelcomeController extends Controller {
 	public function baca_halaman($uuid){
 		 
 		 $halaman = DB::table('halaman')->where('uuid', $uuid)->first();
+		 $aparatur = Aparatur::latest()->orderby('id','desc')->get();
+    	
         if(!$halaman){
             return view('404');
         }
         $galeri = Galeri::latest()->orderby('id','desc')->paginate(4);
        $berita = Berita::latest()->paginate(5);
         $titlepage = $halaman->judul;
-        return view('baca',compact('halaman','titlepage'),['berita' => $berita, 'galeri' => $galeri]);
+        return view('baca',compact('halaman','titlepage'),['berita' => $berita, 'galeri' => $galeri,'aparatur'=>$aparatur]);
       }
 
 
