@@ -5,7 +5,8 @@
 	"license": "MIT",
 	"type": "project",
 	"require": {
-		"laravel/framework": "5.0.*",
+        "php": ">=5.5.9",
+        "laravel/framework": "5.2.*",
 		"intervention/image": "^2.5",
 		"ramsey/uuid": "^3.9"
 	},
@@ -41,6 +42,9 @@
 		]
 	},
 	"config": {
-		"preferred-install": "dist"
+		"preferred-install": "dist",
+		"allow-plugins": {
+			"kylekatarnls/update-helper": true
+		}
 	}
 }
